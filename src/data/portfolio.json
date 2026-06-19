@@ -10,19 +10,37 @@
       { "value": "AWS", "label": "Cloud Expert" },
       { "value": "SaaS", "label": "Founder" }
     ],
-    "resumeUrl": "/resume.pdf"
+    "resumeUrl": "https://docs.google.com/document/d/1pWiArhXJFEY3VylbThUG02WyxnUWEykDv6tvDpeb19g/edit?usp=sharing&format=pdf"
   },
   "socialLinks": [
-    { "platform": "GitHub", "url": "https://github.com/yourusername", "icon": "github" },
-    { "platform": "LinkedIn", "url": "https://linkedin.com/in/yourusername", "icon": "linkedin" },
-    { "platform": "Twitter", "url": "https://twitter.com/yourusername", "icon": "twitter" }
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/yourusername",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/yourusername",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/yourusername",
+      "icon": "twitter"
+    }
   ],
   "experience": [
     {
       "company": "Spartan Poker / OneVerse Gaming",
       "role": "Senior Backend Engineer (SDE-III)",
       "period": "Aug 2023 – Oct 2025",
-      "highlights": ["Payment Systems", "Wallet Infrastructure", "Microservices", "AWS", "Real-time Systems"],
+      "highlights": [
+        "Payment Systems",
+        "Wallet Infrastructure",
+        "Microservices",
+        "AWS",
+        "Real-time Systems"
+      ],
       "description": "Architected and scaled core backend payment infrastructures and real-time gaming services.",
       "bullets": [
         "Spearheaded the migration of legacy monolithic architecture to highly scalable, event-driven microservices using Node.js and AWS.",
@@ -44,12 +62,32 @@
     }
   ],
   "skills": [
-    { "category": "Backend", "items": ["Node.js", "TypeScript", "NestJS", "Express"] },
-    { "category": "Databases", "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
-    { "category": "Cloud", "items": ["AWS Lambda", "EKS", "EC2", "SQS", "SNS", "CloudWatch", "IAM"] },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "TypeScript", "NestJS", "Express"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+    },
+    {
+      "category": "Cloud",
+      "items": ["AWS Lambda", "EKS", "EC2", "SQS", "SNS", "CloudWatch", "IAM"]
+    },
     { "category": "DevOps", "items": ["Docker", "GitHub Actions", "CI/CD"] },
-    { "category": "Observability", "items": ["Sentry", "PostHog", "LogRocket"] },
-    { "category": "Architecture", "items": ["Microservices", "Distributed Systems", "Event Driven Systems", "System Design"] }
+    {
+      "category": "Observability",
+      "items": ["Sentry", "PostHog", "LogRocket"]
+    },
+    {
+      "category": "Architecture",
+      "items": [
+        "Microservices",
+        "Distributed Systems",
+        "Event Driven Systems",
+        "System Design"
+      ]
+    }
   ],
   "projects": [
     {
@@ -61,7 +99,14 @@
         "Leveraged Next.js App Router and React Server Components to reduce client-side JS bundles by 60%, achieving near-instant Time To Interactive.",
         "Implemented real-time data sync using PostgreSQL triggers and designed a seamless Single Sign-On (SSO) authentication workflow."
       ],
-      "techStack": ["Next.js App Router", "Supabase", "PostgreSQL", "Tailwind CSS", "Sentry", "LogRocket"],
+      "techStack": [
+        "Next.js App Router",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Sentry",
+        "LogRocket"
+      ],
       "links": {
         "live": "https://tarbiyahos.com",
         "caseStudy": "/blog/building-tarbiyahos"
