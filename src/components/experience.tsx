@@ -2,25 +2,11 @@
 
 import { Briefcase } from "lucide-react"
 import { motion } from "framer-motion"
-
-const experienceData = [
-  {
-    company: "Spartan Poker / OneVerse Gaming",
-    role: "Senior Backend Engineer (SDE-III)",
-    period: "Aug 2023 – Oct 2025",
-    highlights: ["Payment Systems", "Wallet Infrastructure", "Microservices", "AWS", "Real-time Systems"],
-    description: "Architected and scaled core backend payment infrastructures and real-time gaming services."
-  },
-  {
-    company: "Solulab Pvt Ltd",
-    role: "Backend Engineer",
-    period: "Aug 2021 – May 2023",
-    highlights: ["Node.js", "APIs", "PostgreSQL", "AWS", "Web3 Projects"],
-    description: "Developed and maintained highly performant APIs for diverse SaaS and Web3 applications."
-  }
-]
+import portfolioData from "@/data/portfolio.json"
 
 export function Experience() {
+  const { experience } = portfolioData;
+
   return (
     <section id="experience" className="py-24 px-6 md:px-12 w-full max-w-5xl mx-auto overflow-hidden">
       <motion.div 
@@ -38,7 +24,7 @@ export function Experience() {
         </div>
 
         <div className="relative border-l border-border/50 ml-4 md:ml-6 space-y-12 pb-4">
-          {experienceData.map((job, idx) => (
+          {experience.map((job, idx) => (
             <div key={idx} className="relative pl-8 md:pl-12 group">
               {/* Timeline dot */}
               <div className="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-border group-hover:bg-primary transition-colors duration-300" />

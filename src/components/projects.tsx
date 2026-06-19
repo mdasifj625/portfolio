@@ -4,8 +4,11 @@ import { Code2, ExternalLink, ArrowRight, LayoutTemplate } from "lucide-react"
 import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import portfolioData from "@/data/portfolio.json"
 
 export function Projects() {
+  const project = portfolioData.projects[0];
+
   return (
     <section id="projects" className="py-24 px-6 md:px-12 w-full max-w-5xl mx-auto border-t border-border/40 overflow-hidden">
       <motion.div 
@@ -34,18 +37,18 @@ export function Projects() {
                 <div>
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                    Production Ready
+                    {project.status}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4 tracking-tight">TarbiyahOS</h3>
+                  <h3 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4 tracking-tight">{project.title}</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    A comprehensive SaaS platform designed to streamline educational operations, engineered for high velocity, scalability, and optimal performance.
+                    {project.description}
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">
-                    {["Next.js App Router", "Supabase", "PostgreSQL", "Tailwind CSS", "Sentry", "LogRocket"].map((tech, i) => (
+                    {project.techStack.map((tech, i) => (
                       <span key={i} className="px-3 py-1.5 rounded-md bg-secondary/50 border border-border/50 text-xs font-medium text-secondary-foreground">
                         {tech}
                       </span>
@@ -54,11 +57,11 @@ export function Projects() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3 pt-4">
-                  <Link href="https://tarbiyahos.com" target="_blank" rel="noreferrer" className={buttonVariants({ size: "lg", className: "gap-2 rounded-full font-semibold shadow-lg shadow-primary/20" })}>
+                  <Link href={project.links.live} target="_blank" rel="noreferrer" className={buttonVariants({ size: "lg", className: "gap-2 rounded-full font-semibold shadow-lg shadow-primary/20" })}>
                     View Live App
                     <ExternalLink className="w-4 h-4" />
                   </Link>
-                  <Link href="/blog/building-tarbiyahos" className={buttonVariants({ variant: "ghost", size: "lg", className: "gap-2 rounded-full font-medium hover:bg-secondary/50 group/btn" })}>
+                  <Link href={project.links.caseStudy} className={buttonVariants({ variant: "ghost", size: "lg", className: "gap-2 rounded-full font-medium hover:bg-secondary/50 group/btn" })}>
                     Read Deep Dive
                     <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                   </Link>
@@ -80,8 +83,8 @@ export function Projects() {
                     <LayoutTemplate className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">SaaS Architecture</p>
-                    <p className="text-xs text-muted-foreground mt-1 px-4">Server Components • RLS • Real-time DB</p>
+                    <p className="font-semibold text-foreground">{project.architecture.title}</p>
+                    <p className="text-xs text-muted-foreground mt-1 px-4">{project.architecture.description}</p>
                   </div>
                 </motion.div>
                 

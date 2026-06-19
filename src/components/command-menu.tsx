@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useRouter } from "next/navigation"
-import { useTheme } from "next-themes"
+import * as React from "react";
+import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 import {
   CommandDialog,
   CommandEmpty,
@@ -11,75 +11,108 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command"
-import { Code, Home, User, Briefcase, FileText, Sun, Moon, Laptop } from "lucide-react"
+} from "@/components/ui/command";
+import {
+  Code,
+  Home,
+  User,
+  Briefcase,
+  FileText,
+  Sun,
+  Moon,
+  Laptop,
+} from "lucide-react";
 
 export function CommandMenu() {
-  const [open, setOpen] = React.useState(false)
-  const { setTheme } = useTheme()
-  const router = useRouter()
+  const [open, setOpen] = React.useState(false);
+  const { setTheme } = useTheme();
+  const router = useRouter();
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault()
-        setOpen((open) => !open)
+        e.preventDefault();
+        setOpen((open) => !open);
       }
-    }
-    document.addEventListener("keydown", down)
-    return () => document.removeEventListener("keydown", down)
-  }, [])
+    };
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
 
   const runCommand = React.useCallback((command: () => unknown) => {
-    setOpen(false)
-    command()
-  }, [])
+    setOpen(false);
+    command();
+  }, []);
 
   return (
-    <>
-      <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Type a command or search..." />
-        <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Navigation">
-            <CommandItem value="Home" onSelect={() => runCommand(() => router.push("/"))}>
-              <Home className="mr-2 h-4 w-4" />
-              <span>Home</span>
-            </CommandItem>
-            <CommandItem value="Experience Work" onSelect={() => runCommand(() => router.push("/#experience"))}>
-              <Briefcase className="mr-2 h-4 w-4" />
-              <span>Experience</span>
-            </CommandItem>
-            <CommandItem value="Projects Portfolio Work" onSelect={() => runCommand(() => router.push("/#projects"))}>
-              <Code className="mr-2 h-4 w-4" />
-              <span>Projects</span>
-            </CommandItem>
-            <CommandItem value="Contact Reach Mail" onSelect={() => runCommand(() => router.push("/#contact"))}>
-              <User className="mr-2 h-4 w-4" />
-              <span>Contact</span>
-            </CommandItem>
-            <CommandItem value="Download Resume CV" onSelect={() => runCommand(() => window.open("/resume.pdf", "_blank"))}>
-              <FileText className="mr-2 h-4 w-4" />
-              <span>Download Resume</span>
-            </CommandItem>
-          </CommandGroup>
-          <CommandSeparator />
-          <CommandGroup heading="Theme">
-            <CommandItem value="Light Theme Mode" onSelect={() => runCommand(() => setTheme("light"))}>
-              <Sun className="mr-2 h-4 w-4" />
-              <span>Light Theme</span>
-            </CommandItem>
-            <CommandItem value="Dark Theme Mode" onSelect={() => runCommand(() => setTheme("dark"))}>
-              <Moon className="mr-2 h-4 w-4" />
-              <span>Dark Theme</span>
-            </CommandItem>
-            <CommandItem value="System Theme Mode" onSelect={() => runCommand(() => setTheme("system"))}>
-              <Laptop className="mr-2 h-4 w-4" />
-              <span>System Theme</span>
-            </CommandItem>
-          </CommandGroup>
-        </CommandList>
-      </CommandDialog>
-    </>
-  )
+    <CommandDialog open={open} onOpenChange={setOpen}>
+      <CommandInput placeholder="Type a command or search..." />
+      <CommandList>
+        <CommandEmpty>No results found.</CommandEmpty>
+        <CommandGroup heading="Navigation">
+          <CommandItem
+            value="Home"
+            onSelect={() => runCommand(() => router.push("/"))}
+          >
+            <Home className="mr-2 h-4 w-4" />
+            <span>Home</span>
+          </CommandItem>
+          <CommandItem
+            value="Experience Work"
+            onSelect={() => runCommand(() => router.push("/#experience"))}
+          >
+            <Briefcase className="mr-2 h-4 w-4" />
+            <span>Experience</span>
+          </CommandItem>
+          <CommandItem
+            value="Projects Portfolio Work"
+            onSelect={() => runCommand(() => router.push("/#projects"))}
+          >
+            <Code className="mr-2 h-4 w-4" />
+            <span>Projects</span>
+          </CommandItem>
+          <CommandItem
+            value="Contact Reach Mail"
+            onSelect={() => runCommand(() => router.push("/#contact"))}
+          >
+            <User className="mr-2 h-4 w-4" />
+            <span>Contact</span>
+          </CommandItem>
+          <CommandItem
+            value="Download Resume CV"
+            onSelect={() =>
+              runCommand(() => window.open("/resume.pdf", "_blank"))
+            }
+          >
+            <FileText className="mr-2 h-4 w-4" />
+            <span>Download Resume</span>
+          </CommandItem>
+        </CommandGroup>
+        <CommandSeparator />
+        <CommandGroup heading="Theme">
+          <CommandItem
+            value="Light Theme Mode"
+            onSelect={() => runCommand(() => setTheme("light"))}
+          >
+            <Sun className="mr-2 h-4 w-4" />
+            <span>Light Theme</span>
+          </CommandItem>
+          <CommandItem
+            value="Dark Theme Mode"
+            onSelect={() => runCommand(() => setTheme("dark"))}
+          >
+            <Moon className="mr-2 h-4 w-4" />
+            <span>Dark Theme</span>
+          </CommandItem>
+          <CommandItem
+            value="System Theme Mode"
+            onSelect={() => runCommand(() => setTheme("system"))}
+          >
+            <Laptop className="mr-2 h-4 w-4" />
+            <span>System Theme</span>
+          </CommandItem>
+        </CommandGroup>
+      </CommandList>
+    </CommandDialog>
+  );
 }

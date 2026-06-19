@@ -1,0 +1,55 @@
+{
+  "personal": {
+    "name": "Md Asif Jawed",
+    "role": "Senior Backend Engineer",
+    "availability": "Md Asif Jawed • Available for new opportunities",
+    "description": "Building scalable backend systems, distributed architectures, and production-grade SaaS products.",
+    "stats": [
+      { "value": "4+", "label": "Years Experience" },
+      { "value": "SDE-III", "label": "Senior Level" },
+      { "value": "AWS", "label": "Cloud Expert" },
+      { "value": "SaaS", "label": "Founder" }
+    ],
+    "resumeUrl": "/resume.pdf"
+  },
+  "experience": [
+    {
+      "company": "Spartan Poker / OneVerse Gaming",
+      "role": "Senior Backend Engineer (SDE-III)",
+      "period": "Aug 2023 – Oct 2025",
+      "highlights": ["Payment Systems", "Wallet Infrastructure", "Microservices", "AWS", "Real-time Systems"],
+      "description": "Architected and scaled core backend payment infrastructures and real-time gaming services."
+    },
+    {
+      "company": "Solulab Pvt Ltd",
+      "role": "Backend Engineer",
+      "period": "Aug 2021 – May 2023",
+      "highlights": ["Node.js", "APIs", "PostgreSQL", "AWS", "Web3 Projects"],
+      "description": "Developed and maintained highly performant APIs for diverse SaaS and Web3 applications."
+    }
+  ],
+  "skills": [
+    { "category": "Backend", "items": ["Node.js", "TypeScript", "NestJS", "Express"] },
+    { "category": "Databases", "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+    { "category": "Cloud", "items": ["AWS Lambda", "EKS", "EC2", "SQS", "SNS", "CloudWatch", "IAM"] },
+    { "category": "DevOps", "items": ["Docker", "GitHub Actions", "CI/CD"] },
+    { "category": "Observability", "items": ["Sentry", "PostHog", "LogRocket"] },
+    { "category": "Architecture", "items": ["Microservices", "Distributed Systems", "Event Driven Systems", "System Design"] }
+  ],
+  "projects": [
+    {
+      "title": "TarbiyahOS",
+      "status": "Production Ready",
+      "description": "A comprehensive SaaS platform designed to streamline educational operations, engineered for high velocity, scalability, and optimal performance.",
+      "techStack": ["Next.js App Router", "Supabase", "PostgreSQL", "Tailwind CSS", "Sentry", "LogRocket"],
+      "links": {
+        "live": "https://tarbiyahos.com",
+        "caseStudy": "/blog/building-tarbiyahos"
+      },
+      "architecture": {
+        "title": "SaaS Architecture",
+        "description": "Server Components • RLS • Real-time DB"
+      }
+    }
+  ]
+}

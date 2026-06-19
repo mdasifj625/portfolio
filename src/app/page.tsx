@@ -3,8 +3,11 @@ import { Download, ChevronRight, Briefcase } from "lucide-react";
 import { Experience } from "@/components/experience";
 import { Skills } from "@/components/skills";
 import { Projects } from "@/components/projects";
+import portfolioData from "@/data/portfolio.json";
 
 export default function Home() {
+  const { personal } = portfolioData;
+
   return (
     <>
       <main className="flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-24">
@@ -12,37 +15,29 @@ export default function Home() {
           
           {/* Subtitle / Eyebrow */}
           <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground">
-            Md Asif Jawed • Available for new opportunities
+            {personal.availability}
           </div>
 
           {/* Headings */}
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-              Senior <span className="text-primary">Backend</span> Engineer
+              {personal.role.split("Backend")[0]} 
+              <span className="text-primary">Backend</span> 
+              {personal.role.split("Backend")[1]}
             </h1>
             <p className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground">
-              Building scalable backend systems, distributed architectures, and production-grade SaaS products.
+              {personal.description}
             </p>
           </div>
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-y border-border/50 text-sm">
-            <div className="flex flex-col gap-1">
-              <span className="font-bold text-2xl text-foreground">4+</span>
-              <span className="text-muted-foreground">Years Experience</span>
-            </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-bold text-2xl text-foreground">SDE-III</span>
-              <span className="text-muted-foreground">Senior Level</span>
-            </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-bold text-2xl text-foreground">AWS</span>
-              <span className="text-muted-foreground">Cloud Expert</span>
-            </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-bold text-2xl text-foreground">SaaS</span>
-              <span className="text-muted-foreground">Founder</span>
-            </div>
+            {personal.stats.map((stat, idx) => (
+              <div key={idx} className="flex flex-col gap-1">
+                <span className="font-bold text-2xl text-foreground">{stat.value}</span>
+                <span className="text-muted-foreground">{stat.label}</span>
+              </div>
+            ))}
           </div>
 
           {/* Actions */}

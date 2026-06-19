@@ -2,33 +2,7 @@
 
 import { Layers } from "lucide-react"
 import { motion } from "framer-motion"
-
-const skillsGroups = [
-  {
-    category: "Backend",
-    skills: ["Node.js", "TypeScript", "NestJS", "Express"]
-  },
-  {
-    category: "Databases",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
-  },
-  {
-    category: "Cloud",
-    skills: ["AWS Lambda", "EKS", "EC2", "SQS", "SNS", "CloudWatch", "IAM"]
-  },
-  {
-    category: "DevOps",
-    skills: ["Docker", "GitHub Actions", "CI/CD"]
-  },
-  {
-    category: "Observability",
-    skills: ["Sentry", "PostHog", "LogRocket"]
-  },
-  {
-    category: "Architecture",
-    skills: ["Microservices", "Distributed Systems", "Event Driven Systems", "System Design"]
-  }
-]
+import portfolioData from "@/data/portfolio.json"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,6 +20,8 @@ const itemVariants = {
 }
 
 export function Skills() {
+  const { skills: skillsGroups } = portfolioData;
+
   return (
     <section id="skills" className="py-24 px-6 md:px-12 w-full max-w-5xl mx-auto border-t border-border/40 overflow-hidden">
       <motion.div 
@@ -76,7 +52,7 @@ export function Skills() {
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill, i) => (
+                {group.items.map((skill, i) => (
                   <span
                     key={i}
                     className="inline-flex items-center rounded-md bg-muted px-2.5 py-0.5 text-sm font-medium text-muted-foreground transition-colors group-hover:text-foreground"
