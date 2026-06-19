@@ -4,6 +4,7 @@ import { Download, ChevronRight, Briefcase } from "lucide-react";
 import { Experience } from "@/components/experience";
 import { Skills } from "@/components/skills";
 import { Projects } from "@/components/projects";
+import { Contact } from "@/components/contact";
 import portfolioData from "@/data/portfolio.json";
 
 export default function Home() {
@@ -67,13 +68,13 @@ export default function Home() {
               <Briefcase className="w-4 h-4" />
               View Projects
             </Link>
-            <a 
-              href="mailto:hello@example.com"
+            <Link 
+              href="#contact"
               className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8 w-full sm:w-auto gap-2 group"
             >
               Contact Me
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
       </main>
@@ -81,6 +82,7 @@ export default function Home() {
       <Experience />
       <Skills />
       <Projects />
+      <Contact />
     </>
   );
 }

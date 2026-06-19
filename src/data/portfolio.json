@@ -3,6 +3,7 @@
     "name": "Md Asif Jawed",
     "role": "Senior Backend Engineer",
     "availability": "Available for new opportunities",
+    "email": "hello@example.com",
     "description": "Building scalable backend systems, distributed architectures, and production-grade SaaS products.",
     "stats": [
       { "value": "4+", "label": "Years Experience" },
