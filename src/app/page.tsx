@@ -15,18 +15,25 @@ export default function Home() {
         <div className="max-w-4xl w-full text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           
           {/* Subtitle / Eyebrow */}
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground">
+          <div 
+            className="inline-flex items-center gap-2 rounded-full border border-border/50 bg-secondary/30 px-4 py-1.5 text-sm font-medium text-secondary-foreground shadow-sm backdrop-blur-md animate-in fade-in zoom-in duration-700"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
             {personal.availability}
           </div>
 
           {/* Headings */}
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-              {personal.role.split("Backend")[0]} 
-              <span className="text-primary">Backend</span> 
-              {personal.role.split("Backend")[1]}
+          <div className="space-y-6 pt-4">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground">
+              Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/50">{personal.name}</span>
             </h1>
-            <p className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-muted-foreground tracking-tight">
+              {personal.role}
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground/90 leading-relaxed pt-2">
               {personal.description}
             </p>
           </div>
