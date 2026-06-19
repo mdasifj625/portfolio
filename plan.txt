@@ -1,0 +1,98 @@
+# Product Specification & Development Plan: Senior Backend Engineer Portfolio
+
+## 1. Core Vision & Identity
+Build a modern, production-quality personal portfolio website for Md Asif Jawed, a Senior Backend Engineer (4+ years experience). The goal is to establish high credibility, engineering depth, and production experience, targeting Engineering Managers, Recruiters, CTOs, and Founders at top-tier tech companies and high-growth startups (e.g., Razorpay, PhonePe, Swiggy, Zepto, Flipkart, Groww, Juspay, CRED).
+
+### 1.1 Design System & Aesthetics (Production Grade)
+- **Theme:** High-end, premium, minimal, recruiter-focused. Sleek Dark Mode by default, with an elegant Light Mode fallback.
+- **Color Palette (Dark Mode):** 
+  - Background: Deep slate/obsidian (`#0A0A0A` or `#0F172A`)
+  - Surface: Subtle glassmorphism (`rgba(255, 255, 255, 0.03)`) with 1px borders (`rgba(255, 255, 255, 0.1)`).
+  - Accents: Electric Indigo or Cyan (`#4F46E5` or `#06B6D4`) to signify "tech" and "backend," used sparingly for interactive elements, syntax highlighting, and hover states.
+  - Text: High-contrast white for headings (`#F8FAFC`), muted slate for body text (`#94A3B8`).
+- **Typography:** Modern, highly legible, and premium. 
+  - Headings: **Outfit** or **Inter** (geometric, clean, authoritative).
+  - Body: **Inter** or **Roboto Flex** (excellent readability for long engineering writeups).
+  - Monospace (Code): **JetBrains Mono** or **Fira Code** (beautiful ligatures for code snippets).
+- **Interactions:** Subtle, fluid micro-interactions using Framer Motion. Hover effects on cards (subtle lift and border glow). Avoid flashy, distracting animations; focus on smooth page transitions and scroll reveals.
+
+## 2. Tech Stack & Infrastructure
+- **Framework:** Next.js App Router (latest stable version)
+- **Language:** TypeScript (Strict Mode)
+- **Styling:** Tailwind CSS + custom CSS variables for themes.
+- **UI Components:** shadcn/ui (radix-ui based, accessible, customizable)
+- **Animations:** Framer Motion
+- **Content:** MDX for Technical Deep Dives and Projects.
+- **Deployment:** Vercel (CI/CD, preview environments)
+- **Quality Assurance:**
+  - ESLint + Prettier
+  - Lighthouse Score: 95+ (Performance, Accessibility, Best Practices, SEO)
+- **SEO & Metadata:**
+  - Next.js Metadata API
+  - Open Graph (OG) image generation for articles
+  - JSON-LD structured data for the Person and Articles
+  - Dynamic Sitemap & Robots.txt
+
+## 3. Page Architecture
+
+### 3.1 Home / Landing
+**Hero Section:**
+- **Name:** Md Asif Jawed
+- **Title:** Senior Backend Engineer
+- **Subtitle:** Building scalable backend systems, distributed architectures, and production-grade SaaS products.
+- **Key Stats (Subtle Grid/Banner):** 4+ Years Experience | Senior Backend Engineer | SaaS Founder | AWS & Distributed Systems
+- **Primary CTAs:** Download Resume (Primary), View Projects (Secondary), Contact Me (Ghost)
+
+### 3.2 Experience
+- **Layout:** Vertical timeline with sticky scroll indicators.
+- **Entries:**
+  - **Spartan Poker / OneVerse Gaming** | Senior Backend Engineer (SDE-III) | Aug 2023 – Oct 2025
+    - Highlights: Payment Systems, Wallet Infrastructure, Microservices, AWS, Real-time Systems.
+  - **Solulab Pvt Ltd** | Backend Engineer | Aug 2021 – May 2023
+    - Highlights: Node.js, APIs, PostgreSQL, AWS, Web3 Projects.
+
+### 3.3 Featured Projects
+**Card Layout:** Detailed case-study style cards with architecture diagram placeholders.
+
+**Featured: TarbiyahOS** (Live: https://tarbiyahos.com)
+- Structure: Problem -> Solution -> Architecture -> Tech Stack -> Key Decisions -> Challenges -> Learnings.
+- **Architecture Breakdown:**
+  - Frontend: Next.js
+  - Backend & Auth: Supabase (PostgreSQL + Auth)
+  - Analytics & Monitoring: PostHog, Sentry, LogRocket
+  - Hosting: Vercel
+- Emphasize *WHY* these tools were chosen and trade-offs considered.
+
+### 3.4 Technical Deep Dives (Blog)
+An MDX-powered technical blog focusing on engineering writeups.
+- Building TarbiyahOS with Next.js and Supabase
+- Designing Secure Authentication with Supabase
+- Scaling SaaS Products as a Solo Engineer
+- PostgreSQL Design Decisions in TarbiyahOS
+- Observability with Sentry, PostHog and LogRocket
+*Features:* Reading progress indicator, syntax highlighting, RSS feed.
+
+### 3.5 Skills Graph
+Grouped, pill-based layout, perhaps with subtle categorization icons.
+- **Backend:** Node.js, TypeScript, NestJS, Express
+- **Databases:** PostgreSQL, MySQL, MongoDB, Redis
+- **Cloud:** AWS Lambda, EKS, EC2, SQS, SNS, CloudWatch, IAM
+- **DevOps:** Docker, GitHub Actions, CI/CD
+- **Observability:** Sentry, PostHog, LogRocket
+- **Architecture:** Microservices, Distributed Systems, Event Driven Systems, System Design
+
+### 3.6 Contact
+- Minimalist contact form (Name, Email, Message) using React Hook Form + Zod validation.
+- Links: Email, LinkedIn, GitHub.
+
+## 4. Global Features
+- **Global Navigation:** Floating dock or sticky minimalist navbar with blur backdrop.
+- **Command Menu (⌘K):** Quick navigation, search projects, download resume, toggle theme.
+- **Global "Download Resume" button** always accessible.
+
+## 5. Development Phases
+1. **Phase 1: Setup & Design System** - Next.js init, Tailwind config, font integration, shadcn/ui setup, theme toggler.
+2. **Phase 2: Core Layouts & Routing** - Navigation, Command Menu, Footer.
+3. **Phase 3: Content Implementation** - Hero, Experience Timeline, Skills Section.
+4. **Phase 4: MDX & Dynamic Content** - Projects, Technical Deep Dives structure.
+5. **Phase 5: Polish & Performance** - Framer Motion animations, Lighthouse audits, SEO optimization.
