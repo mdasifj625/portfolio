@@ -51,11 +51,11 @@ export function Skills() {
               <h3 className="mb-4 text-lg font-bold text-foreground">
                 {group.category}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2.5">
                 {group.items.map((skill, i) => (
                   <span
                     key={i}
-                    className="inline-flex items-center rounded-md bg-muted px-2.5 py-0.5 text-sm font-medium text-muted-foreground transition-colors group-hover:text-foreground"
+                    className="inline-flex items-center rounded-lg bg-secondary/80 px-3 py-1.5 text-sm font-medium text-secondary-foreground border border-border/40 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-[0_0_15px_-3px_rgba(var(--primary),0.4)] hover:-translate-y-0.5 cursor-default"
                   >
                     {skill}
                   </span>
