@@ -39,9 +39,17 @@ export function Experience() {
                 </div>
               </div>
 
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-4">
                 {job.description}
               </p>
+
+              {job.bullets && (
+                <ul className="list-disc pl-5 space-y-1.5 text-sm md:text-base text-muted-foreground mb-6 marker:text-primary/70">
+                  {job.bullets.map((bullet: string, i: number) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
 
               <div className="flex flex-wrap gap-2">
                 {job.highlights.map((highlight, i) => (

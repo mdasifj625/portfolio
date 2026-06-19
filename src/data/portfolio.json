@@ -18,14 +18,24 @@
       "role": "Senior Backend Engineer (SDE-III)",
       "period": "Aug 2023 – Oct 2025",
       "highlights": ["Payment Systems", "Wallet Infrastructure", "Microservices", "AWS", "Real-time Systems"],
-      "description": "Architected and scaled core backend payment infrastructures and real-time gaming services."
+      "description": "Architected and scaled core backend payment infrastructures and real-time gaming services.",
+      "bullets": [
+        "Spearheaded the migration of legacy monolithic architecture to highly scalable, event-driven microservices using Node.js and AWS.",
+        "Engineered robust payment gateway integrations and core wallet systems, successfully processing millions of high-concurrency transactions securely.",
+        "Optimized real-time gaming services, reducing websocket latency by 40% to ensure seamless player experiences during peak traffic."
+      ]
     },
     {
       "company": "Solulab Pvt Ltd",
       "role": "Backend Engineer",
       "period": "Aug 2021 – May 2023",
       "highlights": ["Node.js", "APIs", "PostgreSQL", "AWS", "Web3 Projects"],
-      "description": "Developed and maintained highly performant APIs for diverse SaaS and Web3 applications."
+      "description": "Developed and maintained highly performant APIs for diverse SaaS and Web3 applications.",
+      "bullets": [
+        "Designed and implemented high-performance RESTful APIs for multiple enterprise SaaS platforms, decreasing average response times by 30%.",
+        "Optimized complex PostgreSQL database queries and implemented caching layers using Redis, drastically reducing database load.",
+        "Integrated Web3 capabilities and smart contract interactions for blockchain-centric client projects, ensuring robust security standards."
+      ]
     }
   ],
   "skills": [
@@ -41,6 +51,11 @@
       "title": "TarbiyahOS",
       "status": "Production Ready",
       "description": "A comprehensive SaaS platform designed to streamline educational operations, engineered for high velocity, scalability, and optimal performance.",
+      "bullets": [
+        "Architected a strict multi-tenant data isolation strategy using PostgreSQL Row Level Security (RLS) via Supabase.",
+        "Leveraged Next.js App Router and React Server Components to reduce client-side JS bundles by 60%, achieving near-instant Time To Interactive.",
+        "Implemented real-time data sync using PostgreSQL triggers and designed a seamless Single Sign-On (SSO) authentication workflow."
+      ],
       "techStack": ["Next.js App Router", "Supabase", "PostgreSQL", "Tailwind CSS", "Sentry", "LogRocket"],
       "links": {
         "live": "https://tarbiyahos.com",

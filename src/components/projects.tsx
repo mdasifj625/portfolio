@@ -40,9 +40,17 @@ export function Projects() {
                     {project.status}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4 tracking-tight">{project.title}</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                     {project.description}
                   </p>
+
+                  {project.bullets && (
+                    <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-muted-foreground marker:text-primary/70">
+                      {project.bullets.map((bullet: string, i: number) => (
+                        <li key={i}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
 
                 <div className="space-y-4">
