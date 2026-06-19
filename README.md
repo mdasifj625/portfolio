@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Md Asif Jawed - Software Engineer Portfolio
 
-## Getting Started
+A premium, minimal, and highly professional developer portfolio built for speed, SEO, and maintainability. Engineered with a strict separation of concerns, all content is driven by a single JSON source of truth.
 
-First, run the development server:
+## ✨ Features
 
+- **Single Source of Truth**: All text, experience, projects, and skills are managed centrally in `src/data/portfolio.json` for zero-friction content updates.
+- **Modern Tech Stack**: Built on Next.js 16 (App Router) and React 19.
+- **Premium Styling**: Uses Tailwind CSS v4 and `shadcn/ui` with highly refined glassmorphic UI elements, smooth gradients, and custom themes.
+- **Micro-Animations**: Powered by Framer Motion, featuring interactive SaaS architecture diagrams with live animated data flows.
+- **Global Command Menu**: Integrated `cmdk` search bar (`⌘K` / `Ctrl+K`) for lightning-fast site navigation.
+- **SEO Optimized**: Fully equipped with dynamic `sitemap.xml`, `robots.txt`, OpenGraph metadata, and structured JSON-LD schema.
+- **Dark Mode**: Flawless light/dark mode support via `next-themes`.
+- **Type-Safe**: 100% written in TypeScript with strict linting and type checking.
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS, `shadcn/ui`
+- **Animations**: Framer Motion
+- **Icons**: Lucide React (embedded SVGs for brand icons)
+- **Search**: `cmdk`
+- **Deployment**: Vercel (Recommended)
+
+## 📂 Project Structure
+
+```text
+├── src/
+│   ├── app/                # Next.js App Router (pages, layout, SEO)
+│   ├── components/         # Reusable UI components (Experience, Projects, Navbar, etc.)
+│   ├── components/ui/      # shadcn/ui base components
+│   ├── data/               # ⚠️ portfolio.json (Content source of truth)
+│   └── lib/                # Utility functions
+├── package.json
+└── tailwind.config.ts      # Tailwind configuration and theme tokens
+```
+
+## 📝 Editing Content
+
+To update your portfolio, you **do not need to touch the React code**. 
+Simply open `src/data/portfolio.json` and update your details:
+
+```json
+{
+  "personal": {
+    "name": "Md Asif Jawed",
+    "role": "Senior Backend Engineer",
+    "resumeUrl": "https://docs.google.com/..."
+  },
+  "experience": [...],
+  "projects": [...]
+}
+```
+*Note: Ensure your `resumeUrl` uses the Google Docs `/export?format=pdf` format for direct downloads!*
+
+## 🛠️ Local Development
+
+First, clone the repository:
 ```bash
-npm run dev
-# or
+git clone https://github.com/mdasifj625/portfolio.git
+cd portfolio
+```
+
+Install dependencies:
+```bash
+yarn install
+```
+
+Run the development server:
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✅ Build & Validation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Before committing, it's recommended to run the build pipeline to ensure type-safety:
 
-## Learn More
+```bash
+yarn lint
+yarn typecheck
+yarn build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
