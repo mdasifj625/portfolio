@@ -45,7 +45,7 @@ Simply open `src/data/portfolio.json` and update your details:
   "personal": {
     "name": "Md Asif Jawed",
     "role": "Senior Backend Engineer",
-    "avatarUrl": "/avatar.jpg",
+    "avatarUrl": "/avatar.png",
     "resumeUrl": "https://docs.google.com/..."
   },
   "experience": [...],
@@ -53,7 +53,7 @@ Simply open `src/data/portfolio.json` and update your details:
 }
 ```
 *Note: Ensure your `resumeUrl` uses the Google Docs `/export?format=pdf` format for direct downloads!*
-*Note: Place your profile photo in the `public/` directory named `avatar.jpg`.*
+*Note: Place your profile photo in the `public/` directory named `avatar.png`.*
 
 ## 🛠️ Local Development
 
