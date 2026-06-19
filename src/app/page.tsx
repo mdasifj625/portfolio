@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Download, ChevronRight, Briefcase } from "lucide-react";
 import { Experience } from "@/components/experience";
 import { Skills } from "@/components/skills";
+import { Projects } from "@/components/projects";
 
 export default function Home() {
   return (
@@ -64,6 +65,7 @@ export default function Home() {
       
       <Experience />
       <Skills />
+      <Projects />
     </>
   );
 }
