@@ -1,6 +1,6 @@
 "use client"
 
-import { Code2, ExternalLink, ArrowRight, LayoutTemplate } from "lucide-react"
+import { Code2, ExternalLink, ArrowRight, LayoutTemplate, Server, Database, Monitor } from "lucide-react"
 import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -77,7 +77,7 @@ export function Projects() {
               </div>
               
               {/* Right Column - Visual representation */}
-              <div className="flex-1 lg:max-w-sm rounded-2xl bg-gradient-to-tr from-muted/80 to-muted border border-border/50 flex flex-col items-center justify-center min-h-[300px] p-8 text-center relative overflow-hidden shadow-inner">
+              <div className="flex-1 lg:max-w-sm rounded-2xl bg-gradient-to-tr from-muted/80 to-muted border border-border/50 flex flex-col items-center justify-center min-h-[300px] p-8 text-center relative overflow-hidden shadow-inner group/diagram">
                 {/* Abstract grid pattern */}
                 <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)", backgroundSize: "24px 24px" }} />
                 
@@ -85,14 +85,44 @@ export function Projects() {
                   initial={{ scale: 0.9, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
-                  className="relative z-10 space-y-4"
+                  className="relative z-10 w-full flex flex-col items-center gap-8"
                 >
-                  <div className="w-16 h-16 mx-auto rounded-2xl bg-background border border-border/50 shadow-xl flex items-center justify-center">
-                    <LayoutTemplate className="w-8 h-8 text-primary" />
+                  <div className="flex items-center justify-between w-full max-w-[240px] relative px-2">
+                    
+                    {/* Background connecting line */}
+                    <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-border to-transparent -translate-y-1/2" />
+                    
+                    {/* Animated Data Packets */}
+                    <motion.div 
+                      className="absolute top-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_2px_rgba(var(--primary),0.5)] -translate-y-1/2 z-0"
+                      animate={{ left: ["10%", "90%"], opacity: [0, 1, 0] }}
+                      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                    <motion.div 
+                      className="absolute top-1/2 w-1.5 h-1.5 rounded-full bg-secondary-foreground shadow-[0_0_8px_1px_rgba(255,255,255,0.3)] -translate-y-1/2 z-0"
+                      animate={{ right: ["10%", "90%"], opacity: [0, 1, 0] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                    />
+
+                    {/* Node: Client */}
+                    <div className="w-12 h-12 rounded-xl bg-background border border-border shadow-lg flex items-center justify-center z-10 relative group-hover/diagram:-translate-y-1 transition-transform duration-500">
+                      <Monitor className="w-5 h-5 text-muted-foreground group-hover/diagram:text-foreground transition-colors" />
+                    </div>
+                    
+                    {/* Node: API Server */}
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/30 shadow-[0_0_25px_-5px_rgba(var(--primary),0.4)] flex items-center justify-center z-10 relative animate-[pulse_3s_ease-in-out_infinite]">
+                      <Server className="w-7 h-7 text-primary" />
+                    </div>
+                    
+                    {/* Node: Database */}
+                    <div className="w-12 h-12 rounded-xl bg-background border border-border shadow-lg flex items-center justify-center z-10 relative group-hover/diagram:-translate-y-1 transition-transform duration-500">
+                      <Database className="w-5 h-5 text-muted-foreground group-hover/diagram:text-foreground transition-colors" />
+                    </div>
                   </div>
+                  
                   <div>
-                    <p className="font-semibold text-foreground">{project.architecture.title}</p>
-                    <p className="text-xs text-muted-foreground mt-1 px-4">{project.architecture.description}</p>
+                    <p className="font-semibold text-foreground tracking-wide">{project.architecture.title}</p>
+                    <p className="text-xs text-muted-foreground mt-2 px-4 font-mono">{project.architecture.description}</p>
                   </div>
                 </motion.div>
                 
