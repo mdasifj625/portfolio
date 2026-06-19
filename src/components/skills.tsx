@@ -1,6 +1,6 @@
 "use client"
 
-import { Layers } from "lucide-react"
+import { Layers, ChevronRight } from "lucide-react"
 import { motion } from "framer-motion"
 import portfolioData from "@/data/portfolio.json"
 
@@ -48,19 +48,22 @@ export function Skills() {
               variants={itemVariants}
               className="group relative rounded-2xl border border-border/50 bg-card p-6 transition-all hover:shadow-sm hover:border-primary/20"
             >
-              <h3 className="mb-4 text-lg font-bold text-foreground">
+              <h3 className="mb-6 text-lg font-bold text-foreground flex items-center gap-2">
                 {group.category}
               </h3>
-              <div className="flex flex-wrap gap-2.5">
+              <ul className="flex flex-col">
                 {group.items.map((skill, i) => (
-                  <span
+                  <li
                     key={i}
-                    className="inline-flex items-center rounded-lg bg-secondary/80 px-3 py-1.5 text-sm font-medium text-secondary-foreground border border-border/40 transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-[0_0_15px_-3px_rgba(var(--primary),0.4)] hover:-translate-y-0.5 cursor-default"
+                    className="group/item flex items-center gap-3 py-2.5 border-b border-border/40 last:border-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground cursor-default"
                   >
-                    {skill}
-                  </span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary/80 text-primary/70 transition-all duration-300 group-hover/item:bg-primary group-hover/item:text-primary-foreground group-hover/item:shadow-[0_0_10px_-2px_rgba(var(--primary),0.5)]">
+                      <ChevronRight className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="transition-transform duration-300 group-hover/item:translate-x-1">{skill}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
           ))}
         </motion.div>
