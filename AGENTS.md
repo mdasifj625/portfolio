@@ -12,6 +12,7 @@ When assisting with this portfolio project, you must adhere strictly to the foll
 - **Single Source of Truth**: Absolutely **ALL** textual content, links, project details, and experience bullet points MUST be managed in `src/data/portfolio.json`.
 - **No Hardcoding**: NEVER hardcode text directly into React components (`src/components/*` or `src/app/*`). Always map data from the JSON file.
 - **Resume URL Formatting**: When updating the `resumeUrl` in the JSON file, ALWAYS format Google Docs URLs using the `/export?format=pdf` endpoint (e.g., `https://docs.google.com/document/d/DOC_ID/export?format=pdf`). Do NOT use `/edit` or `/view`, as this breaks the one-click PDF download functionality in the Hero section.
+- **Avatar Photo**: The "Let Me Introduce Myself" section relies on a user photo. The `avatarUrl` field in `portfolio.json` specifies its path (usually `/avatar.jpg`). The user must place their photo in the `/public` directory.
 
 ## 2. UI / UX Design System
 - **Tailwind & shadcn/ui**: Rely on Tailwind CSS utilities and `shadcn/ui` components.

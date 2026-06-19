@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Download, ChevronRight, Briefcase } from "lucide-react";
+import { About } from "@/components/about";
 import { Experience } from "@/components/experience";
 import { Skills } from "@/components/skills";
 import { Projects } from "@/components/projects";
@@ -79,6 +80,7 @@ export default function Home() {
         </div>
       </main>
       
+      <About />
       <Experience />
       <Skills />
       <Projects />
