@@ -22,8 +22,24 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Md Asif Jawed - Senior Backend Engineer",
-  description: "Portfolio of Md Asif Jawed, Senior Backend Engineer focusing on scalable systems.",
+  title: {
+    default: "Md Asif Jawed - Senior Backend Engineer",
+    template: "%s | Md Asif Jawed",
+  },
+  description: "Portfolio of Md Asif Jawed, Senior Backend Engineer focusing on scalable systems, distributed architectures, and SaaS products.",
+  openGraph: {
+    title: "Md Asif Jawed - Senior Backend Engineer",
+    description: "Portfolio of Md Asif Jawed, Senior Backend Engineer focusing on scalable systems, distributed architectures, and SaaS products.",
+    url: "https://asif-portfolio.com",
+    siteName: "Md Asif Jawed Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Md Asif Jawed - Senior Backend Engineer",
+    description: "Portfolio of Md Asif Jawed, Senior Backend Engineer focusing on scalable systems, distributed architectures, and SaaS products.",
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +47,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Md Asif Jawed",
+    jobTitle: "Senior Backend Engineer",
+    url: "https://asif-portfolio.com",
+    sameAs: [
+      "https://linkedin.com/in/yourusername",
+      "https://github.com/yourusername"
+    ]
+  };
+
   return (
     <html
       lang="en"
@@ -38,6 +66,10 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

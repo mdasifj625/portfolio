@@ -1,6 +1,7 @@
 "use client"
 
 import { Briefcase } from "lucide-react"
+import { motion } from "framer-motion"
 
 const experienceData = [
   {
@@ -21,8 +22,14 @@ const experienceData = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 md:px-12 w-full max-w-5xl mx-auto">
-      <div className="flex flex-col gap-12">
+    <section id="experience" className="py-24 px-6 md:px-12 w-full max-w-5xl mx-auto overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col gap-12"
+      >
         <div className="flex items-center gap-4">
           <div className="p-3 bg-primary/10 rounded-xl">
             <Briefcase className="w-6 h-6 text-primary" />
@@ -63,7 +70,7 @@ export function Experience() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
