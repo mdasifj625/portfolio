@@ -42,38 +42,38 @@ export function CommandMenu() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Navigation">
-            <CommandItem onSelect={() => runCommand(() => router.push("/"))}>
+            <CommandItem value="Home" onSelect={() => runCommand(() => router.push("/"))}>
               <Home className="mr-2 h-4 w-4" />
               <span>Home</span>
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => router.push("/#experience"))}>
+            <CommandItem value="Experience Work" onSelect={() => runCommand(() => router.push("/#experience"))}>
               <Briefcase className="mr-2 h-4 w-4" />
               <span>Experience</span>
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => router.push("/#projects"))}>
+            <CommandItem value="Projects Portfolio Work" onSelect={() => runCommand(() => router.push("/#projects"))}>
               <Code className="mr-2 h-4 w-4" />
               <span>Projects</span>
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => router.push("/#contact"))}>
+            <CommandItem value="Contact Reach Mail" onSelect={() => runCommand(() => router.push("/#contact"))}>
               <User className="mr-2 h-4 w-4" />
               <span>Contact</span>
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => window.open("/resume.pdf", "_blank"))}>
+            <CommandItem value="Download Resume CV" onSelect={() => runCommand(() => window.open("/resume.pdf", "_blank"))}>
               <FileText className="mr-2 h-4 w-4" />
               <span>Download Resume</span>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Theme">
-            <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
+            <CommandItem value="Light Theme Mode" onSelect={() => runCommand(() => setTheme("light"))}>
               <Sun className="mr-2 h-4 w-4" />
               <span>Light Theme</span>
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
+            <CommandItem value="Dark Theme Mode" onSelect={() => runCommand(() => setTheme("dark"))}>
               <Moon className="mr-2 h-4 w-4" />
               <span>Dark Theme</span>
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
+            <CommandItem value="System Theme Mode" onSelect={() => runCommand(() => setTheme("system"))}>
               <Laptop className="mr-2 h-4 w-4" />
               <span>System Theme</span>
             </CommandItem>
