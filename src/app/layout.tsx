@@ -55,7 +55,7 @@ export default function RootLayout({
     url: "https://asif-portfolio.com",
     sameAs: [
       "https://linkedin.com/in/yourusername",
-      "https://github.com/yourusername"
+      "https://github.com/mdasifj625"
     ]
   };
 
