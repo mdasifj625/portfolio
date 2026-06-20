@@ -30,7 +30,7 @@ export default function Home() {
           {/* Headings */}
           <div className="space-y-6 pt-4">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground">
-              Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/50">{personal.name}</span>
+              Hi, I&apos;m <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/50">{personal.name}</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-muted-foreground tracking-tight">
               {personal.role}
