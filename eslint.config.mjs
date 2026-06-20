@@ -17,7 +17,8 @@ const eslintConfig = defineConfig([
   ]),
   {
     rules: {
-      "react/no-array-index-key": "error"
+      "react/no-array-index-key": "error",
+      "sonarjs/prefer-read-only-props": "error"
     }
   }
 ]);

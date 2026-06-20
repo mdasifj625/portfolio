@@ -4,11 +4,11 @@ import Link, { LinkProps } from "next/link";
 import React from "react";
 
 interface ScrollLinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps>, LinkProps {
-  children: React.ReactNode;
-  className?: string;
+  readonly children: React.ReactNode;
+  readonly className?: string;
 }
 
-export function ScrollLink({ children, href, onClick, ...props }: ScrollLinkProps) {
+export function ScrollLink({ children, href, onClick, ...props }: Readonly<ScrollLinkProps>) {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     onClick?.(e);
     

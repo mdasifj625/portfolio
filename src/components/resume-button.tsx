@@ -5,7 +5,7 @@ import { Download, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ResumeButtonProps {
-  className?: string;
+  readonly className?: string;
 }
 
 export function ResumeButton({ className }: ResumeButtonProps) {

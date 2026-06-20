@@ -4,7 +4,7 @@ import { ArrowLeft, Calendar, Clock, ExternalLink } from "lucide-react";
 import portfolioData from "@/data/portfolio.json";
 import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: Readonly<{ params: Promise<{ slug: string }> }>): Promise<Metadata> {
   const { slug } = await params;
   const work = portfolioData.works?.find((w) => w.slug === slug);
   if (!work) return {};
@@ -20,7 +20,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function WorkPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function WorkPage({ params }: Readonly<{ params: Promise<{ slug: string }> }>) {
   const { slug } = await params;
   const work = portfolioData.works?.find((w) => w.slug === slug);
 
