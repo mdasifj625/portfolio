@@ -4,9 +4,10 @@ A premium, minimal, and highly professional developer portfolio built for speed,
 
 ## ✨ Features
 
-- **Single Source of Truth**: All text, experience, projects, and skills are managed centrally in `src/data/portfolio.json` for zero-friction content updates.
+- **Single Source of Truth**: All text, experience, projects, works (case studies), and skills are managed centrally in `src/data/portfolio.json` for zero-friction content updates.
+- **Dynamic Case Studies**: Features a completely dynamic `/works/[slug]` engine to render high-end technical architecture case studies directly from JSON data.
 - **Modern Tech Stack**: Built on Next.js 16 (App Router) and React 19.
-- **Premium Styling**: Uses Tailwind CSS v4 and `shadcn/ui` with highly refined glassmorphic UI elements, smooth gradients, and custom themes.
+- **Premium Styling**: Uses Tailwind CSS v4 (with `@theme inline` in CSS) and `shadcn/ui` with highly refined glassmorphic UI elements, smooth gradients, and custom themes.
 - **Micro-Animations**: Powered by Framer Motion, featuring interactive SaaS architecture diagrams with live animated data flows.
 - **Global Command Menu**: Integrated `cmdk` search bar (`⌘K` / `Ctrl+K`) for lightning-fast site navigation.
 - **SEO Optimized**: Fully equipped with dynamic `sitemap.xml`, `robots.txt`, OpenGraph metadata, and structured JSON-LD schema.
@@ -26,13 +27,13 @@ A premium, minimal, and highly professional developer portfolio built for speed,
 
 ```text
 ├── src/
-│   ├── app/                # Next.js App Router (pages, layout, SEO)
+│   ├── app/                # Next.js App Router (pages, layout, works route, SEO)
 │   ├── components/         # Reusable UI components (Experience, Projects, Navbar, etc.)
 │   ├── components/ui/      # shadcn/ui base components
 │   ├── data/               # ⚠️ portfolio.json (Content source of truth)
 │   └── lib/                # Utility functions
 ├── package.json
-└── tailwind.config.ts      # Tailwind configuration and theme tokens
+└── src/app/globals.css     # Tailwind v4 configuration (@theme) and global styles
 ```
 
 ## 📝 Editing Content
@@ -49,7 +50,14 @@ Simply open `src/data/portfolio.json` and update your details:
     "resumeUrl": "https://docs.google.com/..."
   },
   "experience": [...],
-  "projects": [...]
+  "projects": [...],
+  "works": [
+    {
+      "slug": "tarbiyahos",
+      "title": "Case Study Title",
+      "sections": [...]
+    }
+  ]
 }
 ```
 *Note: Ensure your `resumeUrl` uses the Google Docs `/export?format=pdf` format for direct downloads!*
