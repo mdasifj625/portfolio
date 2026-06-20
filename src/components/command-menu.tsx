@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { useTheme } from "next-themes";
 import {
   CommandDialog,
   CommandEmpty,
@@ -10,7 +9,6 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
 } from "@/components/ui/command";
 import {
   Code,
@@ -18,14 +16,10 @@ import {
   User,
   Briefcase,
   FileText,
-  Sun,
-  Moon,
-  Laptop,
 } from "lucide-react";
 
 export function CommandMenu() {
   const [open, setOpen] = React.useState(false);
-  const { setTheme } = useTheme();
   const router = useRouter();
 
   React.useEffect(() => {
@@ -86,30 +80,6 @@ export function CommandMenu() {
           >
             <FileText className="mr-2 h-4 w-4" />
             <span>Download Resume</span>
-          </CommandItem>
-        </CommandGroup>
-        <CommandSeparator />
-        <CommandGroup heading="Theme">
-          <CommandItem
-            value="Light Theme Mode"
-            onSelect={() => runCommand(() => setTheme("light"))}
-          >
-            <Sun className="mr-2 h-4 w-4" />
-            <span>Light Theme</span>
-          </CommandItem>
-          <CommandItem
-            value="Dark Theme Mode"
-            onSelect={() => runCommand(() => setTheme("dark"))}
-          >
-            <Moon className="mr-2 h-4 w-4" />
-            <span>Dark Theme</span>
-          </CommandItem>
-          <CommandItem
-            value="System Theme Mode"
-            onSelect={() => runCommand(() => setTheme("system"))}
-          >
-            <Laptop className="mr-2 h-4 w-4" />
-            <span>System Theme</span>
           </CommandItem>
         </CommandGroup>
       </CommandList>
