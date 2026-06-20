@@ -46,7 +46,7 @@ export function Skills() {
             <motion.div 
               key={idx}
               variants={itemVariants}
-              className="group relative rounded-2xl border border-border/50 bg-card p-6 transition-all hover:shadow-sm hover:border-primary/20"
+              className="group relative border-l border-border/50 pl-6 transition-colors hover:border-primary/50"
             >
               <h3 className="mb-6 text-lg font-bold text-foreground flex items-center gap-2">
                 {group.category}

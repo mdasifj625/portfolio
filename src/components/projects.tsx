@@ -25,11 +25,12 @@ export function Projects() {
           <h2 className="text-3xl font-bold tracking-tight">Featured Project</h2>
         </div>
 
-        <div className="group relative rounded-3xl border border-border/50 bg-gradient-to-br from-card to-card/30 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-primary/30 hover:shadow-[0_0_40px_-15px_rgba(var(--primary),0.1)]">
-          {/* Subtle background glow */}
-          <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-          
-          <div className="relative p-8 md:p-10 lg:p-12 z-10">
+        <div className="relative border-l border-border/50 ml-4 md:ml-6 pb-4">
+          <div className="relative pl-8 md:pl-12 group transition-all duration-500">
+            {/* Timeline dot */}
+            <div className="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-border group-hover:bg-primary transition-colors duration-300 shadow-[0_0_10px_0_rgba(var(--primary),0)] group-hover:shadow-[0_0_10px_2px_rgba(var(--primary),0.5)]" />
+            
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
             <div className="flex flex-col lg:flex-row gap-12 justify-between">
               
               {/* Left Column - Content */}
