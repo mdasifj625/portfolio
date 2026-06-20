@@ -24,8 +24,8 @@ export function Experience() {
         </div>
 
         <div className="relative border-l-2 border-border/50 space-y-12 pb-4 mt-8">
-          {experience.map((job, idx) => (
-            <div key={idx} className="relative pl-6 group">
+          {experience.map((job) => (
+            <div key={job.company} className="relative pl-6 group">
               {/* Timeline dot */}
               <div className="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-border group-hover:bg-primary transition-colors duration-300" />
               
@@ -45,16 +45,16 @@ export function Experience() {
 
               {job.bullets && (
                 <ul className="list-disc pl-5 space-y-1.5 text-sm md:text-base text-muted-foreground mb-6 marker:text-primary/70">
-                  {job.bullets.map((bullet: string, i: number) => (
-                    <li key={i}>{bullet}</li>
+                  {job.bullets.map((bullet: string) => (
+                    <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
               )}
 
               <div className="flex flex-wrap gap-2">
-                {job.highlights.map((highlight, i) => (
+                {job.highlights.map((highlight) => (
                   <span
-                    key={i}
+                    key={highlight}
                     className="inline-flex items-center rounded-full border border-border/50 bg-background px-3 py-1 text-xs font-medium text-foreground transition-colors hover:bg-muted"
                   >
                     {highlight}

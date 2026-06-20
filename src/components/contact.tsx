@@ -80,9 +80,9 @@ export function Contact() {
           <div className="space-y-3 pt-2">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Social Profiles</h3>
             <div className="flex items-center gap-3">
-              {portfolioData.socialLinks.map((link, i) => (
+              {portfolioData.socialLinks.map((link) => (
                 <a 
-                  key={i} 
+                  key={link.platform} 
                   href={link.url} 
                   target="_blank" 
                   rel="noreferrer" 

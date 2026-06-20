@@ -26,8 +26,8 @@ export function About() {
           </div>
 
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-            {personal.about?.map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
+            {personal.about?.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
         </div>

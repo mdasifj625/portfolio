@@ -42,9 +42,9 @@ export function Skills() {
           variants={containerVariants}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {skillsGroups.map((group, idx) => (
+          {skillsGroups.map((group) => (
             <motion.div 
-              key={idx}
+              key={group.category}
               variants={itemVariants}
               className="group relative border-l-2 border-border/50 pl-6 transition-colors hover:border-primary/50"
             >
@@ -52,9 +52,9 @@ export function Skills() {
                 {group.category}
               </h3>
               <ul className="flex flex-col">
-                {group.items.map((skill, i) => (
+                {group.items.map((skill) => (
                   <li
-                    key={i}
+                    key={skill}
                     className="group/item flex items-center gap-3 py-2.5 border-b border-border/40 last:border-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground cursor-default"
                   >
                     <span className="flex items-center justify-center w-6 shrink-0">

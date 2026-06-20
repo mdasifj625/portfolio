@@ -47,8 +47,8 @@ export function Projects() {
 
                   {project.bullets && (
                     <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-muted-foreground marker:text-primary/70">
-                      {project.bullets.map((bullet: string, i: number) => (
-                        <li key={i}>{bullet}</li>
+                      {project.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
                       ))}
                     </ul>
                   )}
@@ -57,8 +57,8 @@ export function Projects() {
                 <div className="space-y-4">
                   <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">
-                    {project.techStack.map((tech, i) => (
-                      <span key={i} className="px-3 py-1.5 rounded-md bg-secondary/50 border border-border/50 text-xs font-medium text-secondary-foreground">
+                    {project.techStack.map((tech) => (
+                      <span key={tech} className="px-3 py-1.5 rounded-md bg-secondary/50 border border-border/50 text-xs font-medium text-secondary-foreground">
                         {tech}
                       </span>
                     ))}

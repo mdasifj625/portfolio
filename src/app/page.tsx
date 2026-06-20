@@ -43,8 +43,8 @@ export default function Home() {
 
           {/* Stats Bento Box */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/40 border border-border/50 rounded-2xl overflow-hidden my-8 shadow-sm w-full max-w-3xl mx-auto">
-            {personal.stats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col items-center justify-center gap-1.5 bg-background/60 backdrop-blur-md px-4 py-6 hover:bg-muted/40 transition-colors group">
+            {personal.stats.map((stat) => (
+              <div key={stat.label} className="flex flex-col items-center justify-center gap-1.5 bg-background/60 backdrop-blur-md px-4 py-6 hover:bg-muted/40 transition-colors group">
                 <span className="font-extrabold text-3xl md:text-4xl text-foreground tracking-tight group-hover:text-primary transition-colors duration-300">
                   {stat.value}
                 </span>

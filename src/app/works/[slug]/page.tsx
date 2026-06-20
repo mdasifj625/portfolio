@@ -47,8 +47,8 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
           {/* Header */}
           <header className="space-y-6 mb-12">
             <div className="flex flex-wrap items-center gap-2">
-              {work.tags.map((tag: string, idx: number) => (
-                <span key={idx} className="px-2.5 py-1 rounded-md bg-secondary/50 text-secondary-foreground text-xs font-medium tracking-wide">
+              {work.tags.map((tag: string) => (
+                <span key={tag} className="px-2.5 py-1 rounded-md bg-secondary/50 text-secondary-foreground text-xs font-medium tracking-wide">
                   {tag}
                 </span>
               ))}
@@ -91,7 +91,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
           {/* Content Body */}
           <div className="prose prose-slate dark:prose-invert max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-primary prose-p:leading-7 prose-p:text-muted-foreground">
             {work.sections.map((section: { heading: string; content: string }, idx: number) => (
-              <div key={idx} className="mb-12 scroll-mt-20">
+              <div key={section.heading} className="mb-12 scroll-mt-20">
                 <h3 className="text-2xl font-bold text-foreground mb-4 flex items-baseline gap-3">
                   <span className="text-primary/50 font-mono text-lg font-normal">
                     {String(idx + 1).padStart(2, '0')}
