@@ -15,6 +15,11 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      "react/no-array-index-key": "error"
+    }
+  }
 ]);
 
 export default eslintConfig;
