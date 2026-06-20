@@ -1,6 +1,6 @@
 
 import { ScrollLink as Link } from "@/components/scroll-link";
-import { Download, ChevronRight, Briefcase } from "lucide-react";
+import { ChevronRight, Briefcase } from "lucide-react";
 import { ResumeButton } from "@/components/resume-button";
 import { About } from "@/components/about";
 import { Experience } from "@/components/experience";

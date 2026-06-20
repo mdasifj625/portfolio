@@ -19,7 +19,6 @@ import {
   Code2,
   Download
 } from "lucide-react";
-import portfolioData from "@/data/portfolio.json";
 
 export function CommandMenu() {
   const [open, setOpen] = React.useState(false);
