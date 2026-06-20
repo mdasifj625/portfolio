@@ -38,7 +38,7 @@ export function About() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="w-full md:w-1/3 flex justify-center"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl group">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-background ring-4 ring-primary/20 dark:ring-primary/40 shadow-2xl group">
             {/* Using a standard img tag to prevent next/image build errors if the user hasn't added avatar.jpg yet */}
             <img 
               src={personal.avatarUrl} 
