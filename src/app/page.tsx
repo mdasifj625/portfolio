@@ -40,14 +40,14 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Stats Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 py-6">
+          {/* Stats Bento Box */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/40 border border-border/50 rounded-2xl overflow-hidden my-8 shadow-sm w-full max-w-3xl mx-auto">
             {personal.stats.map((stat, idx) => (
-              <div key={idx} className="flex items-center gap-2.5 bg-secondary/30 border border-border/50 rounded-full px-5 py-2.5 shadow-sm backdrop-blur-sm transition-colors hover:bg-secondary/50 hover:border-primary/20">
-                <span className="font-bold text-lg text-primary tracking-tight">
+              <div key={idx} className="flex flex-col items-center justify-center gap-1.5 bg-background/60 backdrop-blur-md px-4 py-6 hover:bg-muted/40 transition-colors group">
+                <span className="font-extrabold text-3xl md:text-4xl text-foreground tracking-tight group-hover:text-primary transition-colors duration-300">
                   {stat.value}
                 </span>
-                <span className="text-sm font-medium text-foreground/80">
+                <span className="text-xs md:text-sm font-medium uppercase tracking-wider text-muted-foreground text-center">
                   {stat.label}
                 </span>
               </div>
