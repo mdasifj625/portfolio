@@ -25,8 +25,8 @@ export function Projects() {
           <h2 className="text-3xl font-bold tracking-tight">Featured Project</h2>
         </div>
 
-        <div className="relative border-l border-border/50 ml-4 md:ml-6 pb-4">
-          <div className="relative pl-8 md:pl-12 group transition-all duration-500">
+        <div className="relative border-l-2 border-border/50 pb-4 mt-8">
+          <div className="relative pl-6 group transition-all duration-500">
             {/* Timeline dot */}
             <div className="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-border group-hover:bg-primary transition-colors duration-300 shadow-[0_0_10px_0_rgba(var(--primary),0)] group-hover:shadow-[0_0_10px_2px_rgba(var(--primary),0.5)]" />
             

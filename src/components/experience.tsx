@@ -23,9 +23,9 @@ export function Experience() {
           <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
         </div>
 
-        <div className="relative border-l border-border/50 ml-4 md:ml-6 space-y-12 pb-4">
+        <div className="relative border-l-2 border-border/50 space-y-12 pb-4 mt-8">
           {experience.map((job, idx) => (
-            <div key={idx} className="relative pl-8 md:pl-12 group">
+            <div key={idx} className="relative pl-6 group">
               {/* Timeline dot */}
               <div className="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-border group-hover:bg-primary transition-colors duration-300" />
               
