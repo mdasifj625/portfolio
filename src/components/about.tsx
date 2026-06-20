@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { User } from "lucide-react"
 import { motion } from "framer-motion"
 import portfolioData from "@/data/portfolio.json"
@@ -39,15 +40,12 @@ export function About() {
           className="w-full md:w-1/3 flex justify-center"
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-background ring-4 ring-primary/20 dark:ring-primary/40 shadow-2xl group">
-            {/* Using a standard img tag to prevent next/image build errors if the user hasn't added avatar.jpg yet */}
-            <img 
+            <Image 
               src={personal.avatarUrl} 
               alt={personal.name}
+              width={320}
+              height={320}
               className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-              onError={(e) => {
-                // Fallback to a placeholder if the avatar isn't uploaded yet
-                e.currentTarget.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(personal.name) + "&size=512&background=random";
-              }}
             />
           </div>
         </motion.div>

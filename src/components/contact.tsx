@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Send, CheckCircle2, Copy } from "lucide-react"
+import { Mail, CheckCircle2, Copy } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import portfolioData from "@/data/portfolio.json"

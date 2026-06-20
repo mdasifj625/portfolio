@@ -17,7 +17,6 @@ import {
   Briefcase,
   Mail,
   Code2,
-  BookOpen,
   Download
 } from "lucide-react";
 import portfolioData from "@/data/portfolio.json";

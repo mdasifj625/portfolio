@@ -1,6 +1,6 @@
 "use client"
 
-import { Code2, ExternalLink, ArrowRight, LayoutTemplate, Server, Database, Monitor } from "lucide-react"
+import { Code2, ExternalLink, ArrowRight, Server, Database, Monitor } from "lucide-react"
 import Link from "next/link"
 import { buttonVariants } from "@/components/ui/button"
 import { motion } from "framer-motion"
