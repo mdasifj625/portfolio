@@ -15,8 +15,12 @@ import {
   Home,
   User,
   Briefcase,
-  FileText,
+  Mail,
+  Code2,
+  BookOpen,
+  Download
 } from "lucide-react";
+import portfolioData from "@/data/portfolio.json";
 
 export function CommandMenu() {
   const [open, setOpen] = React.useState(false);
@@ -52,11 +56,25 @@ export function CommandMenu() {
             <span>Home</span>
           </CommandItem>
           <CommandItem
+            value="About Background Profile"
+            onSelect={() => runCommand(() => router.push("/#about"))}
+          >
+            <User className="mr-2 h-4 w-4" />
+            <span>About</span>
+          </CommandItem>
+          <CommandItem
             value="Experience Work"
             onSelect={() => runCommand(() => router.push("/#experience"))}
           >
             <Briefcase className="mr-2 h-4 w-4" />
             <span>Experience</span>
+          </CommandItem>
+          <CommandItem
+            value="Skills Tech Stack"
+            onSelect={() => runCommand(() => router.push("/#skills"))}
+          >
+            <Code2 className="mr-2 h-4 w-4" />
+            <span>Skills</span>
           </CommandItem>
           <CommandItem
             value="Projects Portfolio Work"
@@ -66,19 +84,26 @@ export function CommandMenu() {
             <span>Projects</span>
           </CommandItem>
           <CommandItem
-            value="Contact Reach Mail"
+            value="Contact Reach Email"
             onSelect={() => runCommand(() => router.push("/#contact"))}
           >
-            <User className="mr-2 h-4 w-4" />
+            <Mail className="mr-2 h-4 w-4" />
             <span>Contact</span>
+          </CommandItem>
+          <CommandItem
+            value="Blog Writing Articles"
+            onSelect={() => runCommand(() => router.push("/blog"))}
+          >
+            <BookOpen className="mr-2 h-4 w-4" />
+            <span>Technical Blog</span>
           </CommandItem>
           <CommandItem
             value="Download Resume CV"
             onSelect={() =>
-              runCommand(() => window.open("/resume.pdf", "_blank"))
+              runCommand(() => window.open(portfolioData.personal.resumeUrl, "_blank"))
             }
           >
-            <FileText className="mr-2 h-4 w-4" />
+            <Download className="mr-2 h-4 w-4" />
             <span>Download Resume</span>
           </CommandItem>
         </CommandGroup>
