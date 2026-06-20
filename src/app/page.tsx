@@ -1,6 +1,7 @@
 
 import { ScrollLink as Link } from "@/components/scroll-link";
 import { Download, ChevronRight, Briefcase } from "lucide-react";
+import { ResumeButton } from "@/components/resume-button";
 import { About } from "@/components/about";
 import { Experience } from "@/components/experience";
 import { Skills } from "@/components/skills";
@@ -56,14 +57,7 @@ export default function Home() {
 
           {/* Actions */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <a
-              href="/api/resume"
-              download
-              className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 w-full sm:w-auto gap-2 group"
-            >
-              <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
-              Download Resume
-            </a>
+            <ResumeButton className="w-full sm:w-auto" />
             <Link
               href="/#projects"
               className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 rounded-md px-8 w-full sm:w-auto gap-2"

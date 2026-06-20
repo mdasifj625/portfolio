@@ -17,12 +17,13 @@ export async function GET() {
 
     const buffer = await response.arrayBuffer();
     
-    const safeName = portfolioData.personal.name.replace(/\s+/g, '_');
+    const safeName = portfolioData.personal.name.split(' ').pop()?.toUpperCase() || 'ASIF';
+    const safeRole = portfolioData.personal.role.replace(/[^a-zA-Z0-9]/g, '_').toUpperCase();
 
     return new NextResponse(buffer, {
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="${safeName}_Resume.pdf"`,
+        'Content-Disposition': `attachment; filename="${safeName}_${safeRole}_RESUME.pdf"`,
       },
     });
   } catch (error) {
