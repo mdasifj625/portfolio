@@ -95,15 +95,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 w-full pt-4">
-            <a 
-              href={`mailto:${personal.email}`}
-              className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-lg px-6 w-full sm:w-auto gap-2 shadow-md"
-            >
-              <Send className="w-4 h-4" />
-              Write an Email
-            </a>
-          </div>
+
         </div>
       </motion.div>
     </section>
