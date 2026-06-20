@@ -14,14 +14,14 @@ export function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col md:flex-row gap-12 items-center"
+        className="flex flex-col-reverse md:flex-row gap-12 md:gap-16 items-center"
       >
         <div className="flex-1 space-y-8">
           <div className="flex items-center gap-4">
             <div className="p-3 bg-primary/10 rounded-xl">
               <User className="w-6 h-6 text-primary" />
             </div>
-            <h2 className="text-3xl font-bold tracking-tight uppercase">Let Me Introduce Myself</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">Behind the Code</h2>
           </div>
 
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
