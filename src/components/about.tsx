@@ -1,55 +1,60 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { User } from "lucide-react"
-import { motion } from "framer-motion"
-import portfolioData from "@/data/portfolio.json"
+import Image from "next/image";
+import { User } from "lucide-react";
+import { motion } from "framer-motion";
+import portfolioData from "@/data/portfolio.json";
 
 export function About() {
   const { personal } = portfolioData;
 
   return (
-    <section id="about" className="py-16 md:py-24 px-6 md:px-12 w-full max-w-6xl mx-auto border-t border-border/40 overflow-hidden">
-      <motion.div 
+    <section
+      id="about"
+      className="border-border/40 mx-auto w-full max-w-6xl overflow-hidden border-t px-6 py-16 md:px-12 md:py-24"
+    >
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col-reverse md:flex-row gap-12 md:gap-16 items-center"
+        className="flex flex-col-reverse items-center gap-12 md:flex-row md:gap-16"
       >
         <div className="flex-1 space-y-8">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-primary/10 rounded-xl">
-              <User className="w-6 h-6 text-primary" />
+            <div className="bg-primary/10 rounded-xl p-3">
+              <User className="text-primary h-6 w-6" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">Behind the Code</h2>
+            <h2 className="text-foreground text-3xl font-extrabold tracking-tight md:text-4xl">
+              Behind the Code
+            </h2>
           </div>
 
-          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+          <div className="text-muted-foreground space-y-4 text-lg leading-relaxed">
             {personal.about?.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full md:w-1/3 flex justify-center"
+          className="flex w-full justify-center md:w-1/3"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-background ring-4 ring-primary/20 dark:ring-primary/40 shadow-2xl group">
-            <Image 
-              src={personal.avatarUrl} 
+          <div className="border-background ring-primary/20 dark:ring-primary/40 group relative h-64 w-64 overflow-hidden rounded-full border-4 shadow-2xl ring-4 md:h-80 md:w-80">
+            <Image
+              src={personal.avatarUrl}
               alt={personal.name}
               width={320}
               height={320}
-              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </div>
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

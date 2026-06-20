@@ -53,13 +53,7 @@
       "company": "TarbiyahOS",
       "role": "Independent Product Engineer",
       "period": "Nov 2025 – Present",
-      "highlights": [
-        "SaaS Product",
-        "Next.js",
-        "Supabase",
-        "PostgreSQL",
-        "Observability"
-      ],
+      "highlights": ["SaaS Product", "Next.js", "Supabase", "PostgreSQL", "Observability"],
       "description": "Designed and launched a parenting-focused SaaS platform while owning product architecture, engineering, deployment, monitoring, analytics, and growth infrastructure.",
       "bullets": [
         "Architected and developed the platform using Next.js, TypeScript, Supabase, PostgreSQL, and Tailwind CSS.",
@@ -121,16 +115,7 @@
     },
     {
       "category": "Cloud",
-      "items": [
-        "AWS Lambda",
-        "EC2",
-        "EKS",
-        "S3",
-        "SQS",
-        "SNS",
-        "CloudWatch",
-        "IAM"
-      ]
+      "items": ["AWS Lambda", "EC2", "EKS", "S3", "SQS", "SNS", "CloudWatch", "IAM"]
     },
     {
       "category": "DevOps",

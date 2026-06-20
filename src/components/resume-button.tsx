@@ -13,20 +13,20 @@ export function ResumeButton({ className }: ResumeButtonProps) {
 
   const handleDownload = async () => {
     if (isDownloading) return;
-    
+
     try {
       setIsDownloading(true);
-      
+
       const response = await fetch("/api/resume");
       if (!response.ok) throw new Error("Network response was not ok");
-      
+
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
-      
+
       const a = document.createElement("a");
       a.style.display = "none";
       a.href = url;
-      
+
       // Extract filename from Content-Disposition header if possible
       const contentDisposition = response.headers.get("Content-Disposition");
       let filename = "Resume.pdf";
@@ -34,11 +34,11 @@ export function ResumeButton({ className }: ResumeButtonProps) {
         const matches = /filename="([^"]*)"/.exec(contentDisposition);
         if (matches != null && matches[1]) filename = matches[1];
       }
-      
+
       a.download = filename;
       document.body.appendChild(a);
       a.click();
-      
+
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (error) {
@@ -53,14 +53,14 @@ export function ResumeButton({ className }: ResumeButtonProps) {
       onClick={handleDownload}
       disabled={isDownloading}
       className={cn(
-        "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-80 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 gap-2 group",
+        "ring-offset-background focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 group inline-flex h-11 items-center justify-center gap-2 rounded-md px-8 text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-80",
         className
       )}
     >
       {isDownloading ? (
-        <Loader2 className="w-4 h-4 animate-spin" />
+        <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
-        <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+        <Download className="h-4 w-4 transition-transform group-hover:-translate-y-1" />
       )}
       {isDownloading ? "Downloading..." : "Download Resume"}
     </button>

@@ -37,33 +37,28 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-backdrop-filter:bg-background/60 shadow-sm">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between mx-auto px-4 md:px-8">
+    <header className="border-border/40 bg-background/80 supports-backdrop-filter:bg-background/60 sticky top-0 z-50 w-full border-b shadow-sm backdrop-blur-xl">
+      <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-8">
         <div className="flex">
-          <Link
-            href="/"
-            className="mr-4 md:mr-8 flex items-center space-x-2 group"
-          >
-            <div className="bg-primary/10 p-1.5 rounded-lg group-hover:bg-primary/20 transition-colors">
-              <TerminalSquare className="h-5 w-5 text-primary" />
+          <Link href="/" className="group mr-4 flex items-center space-x-2 md:mr-8">
+            <div className="bg-primary/10 group-hover:bg-primary/20 rounded-lg p-1.5 transition-colors">
+              <TerminalSquare className="text-primary h-5 w-5" />
             </div>
-            <span className="hidden font-bold sm:inline-block tracking-tight text-lg group-hover:text-primary transition-colors">
+            <span className="group-hover:text-primary hidden text-lg font-bold tracking-tight transition-colors sm:inline-block">
               {portfolioData.personal.initials}
             </span>
           </Link>
-          <nav className="hidden md:flex items-center space-x-5 lg:space-x-8 text-sm font-medium">
-            {["About", "Experience", "Skills", "Projects", "Contact"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href={`/#${item.toLowerCase()}`}
-                  className="relative transition-colors hover:text-foreground text-muted-foreground group"
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-                </Link>
-              ),
-            )}
+          <nav className="hidden items-center space-x-5 text-sm font-medium md:flex lg:space-x-8">
+            {["About", "Experience", "Skills", "Projects", "Contact"].map((item) => (
+              <Link
+                key={item}
+                href={`/#${item.toLowerCase()}`}
+                className="hover:text-foreground text-muted-foreground group relative transition-colors"
+              >
+                {item}
+                <span className="bg-primary absolute -bottom-1 left-0 h-0.5 w-0 transition-all group-hover:w-full" />
+              </Link>
+            ))}
           </nav>
         </div>
 
@@ -71,23 +66,21 @@ export function Navbar() {
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <Button
               variant="outline"
-              className="relative h-9 w-full justify-start rounded-full bg-muted/50 hover:bg-muted text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-56 lg:w-64 border-border/50"
+              className="bg-muted/50 hover:bg-muted text-muted-foreground border-border/50 relative h-9 w-full justify-start rounded-full text-sm font-normal shadow-none sm:pr-12 md:w-56 lg:w-64"
               onClick={() =>
-                document.dispatchEvent(
-                  new KeyboardEvent("keydown", { key: "k", metaKey: true }),
-                )
+                document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }))
               }
             >
               <span className="hidden lg:inline-flex">Search website...</span>
               <span className="inline-flex lg:hidden">Search...</span>
-              <kbd className="pointer-events-none absolute right-1.5 top-1.5 hidden h-6 select-none items-center gap-1 rounded-full border bg-background px-2 font-mono text-[10px] font-medium opacity-100 sm:flex shadow-sm">
+              <kbd className="bg-background pointer-events-none absolute top-1.5 right-1.5 hidden h-6 items-center gap-1 rounded-full border px-2 font-mono text-[10px] font-medium opacity-100 shadow-sm select-none sm:flex">
                 <span className="text-xs">⌘</span>K
               </kbd>
             </Button>
           </div>
 
-          <nav className="flex items-center space-x-1 ml-2">
-            <div className="hidden md:flex items-center space-x-1 border-r border-border/50 pr-2 mr-1">
+          <nav className="ml-2 flex items-center space-x-1">
+            <div className="border-border/50 mr-1 hidden items-center space-x-1 border-r pr-2 md:flex">
               {socialLinks.map((link) => (
                 <Link
                   key={link.platform}
@@ -95,7 +88,7 @@ export function Navbar() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={link.platform}
-                  className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/10 hover:text-primary h-9 w-9 rounded-full"
+                  className="focus-visible:ring-ring hover:bg-primary/10 hover:text-primary inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
                 >
                   {getIcon(link.icon)}
                 </Link>
@@ -108,8 +101,8 @@ export function Navbar() {
               className="h-9 w-9 rounded-full"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-4 w-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+              <Moon className="absolute h-4 w-4 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               <span className="sr-only">Toggle theme</span>
             </Button>
           </nav>

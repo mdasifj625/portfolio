@@ -7,7 +7,6 @@ import { Footer } from "@/components/footer";
 import { CommandMenu } from "@/components/command-menu";
 import portfolioData from "@/data/portfolio.json";
 
-
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -55,14 +54,14 @@ export default function RootLayout({
     name: portfolioData.personal.name,
     jobTitle: portfolioData.personal.role,
     url: portfolioData.personal.domain,
-    sameAs: portfolioData.socialLinks.map((link) => link.url)
+    sameAs: portfolioData.socialLinks.map((link) => link.url),
   };
 
   return (
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth scroll-pt-24`}
+      className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} h-full scroll-pt-24 scroll-smooth antialiased`}
     >
       <head>
         <script
@@ -70,13 +69,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans overflow-x-hidden" suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body
+        className="flex min-h-full flex-col overflow-x-hidden font-sans"
+        suppressHydrationWarning
+      >
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
           {children}
           <Footer />

@@ -10,15 +10,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import {
-  Code,
-  Home,
-  User,
-  Briefcase,
-  Mail,
-  Code2,
-  Download
-} from "lucide-react";
+import { Code, Home, User, Briefcase, Mail, Code2, Download } from "lucide-react";
 
 export function CommandMenu() {
   const [open, setOpen] = React.useState(false);
@@ -46,10 +38,7 @@ export function CommandMenu() {
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Navigation">
-          <CommandItem
-            value="Home"
-            onSelect={() => runCommand(() => router.push("/"))}
-          >
+          <CommandItem value="Home" onSelect={() => runCommand(() => router.push("/"))}>
             <Home className="mr-2 h-4 w-4" />
             <span>Home</span>
           </CommandItem>
@@ -91,9 +80,7 @@ export function CommandMenu() {
 
           <CommandItem
             value="Download Resume CV"
-            onSelect={() =>
-              runCommand(() => window.location.href = "/api/resume")
-            }
+            onSelect={() => runCommand(() => (window.location.href = "/api/resume"))}
           >
             <Download className="mr-2 h-4 w-4" />
             <span>Download Resume</span>

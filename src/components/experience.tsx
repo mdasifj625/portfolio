@@ -1,15 +1,18 @@
-"use client"
+"use client";
 
-import { Briefcase } from "lucide-react"
-import { motion } from "framer-motion"
-import portfolioData from "@/data/portfolio.json"
+import { Briefcase } from "lucide-react";
+import { motion } from "framer-motion";
+import portfolioData from "@/data/portfolio.json";
 
 export function Experience() {
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="py-16 md:py-24 px-6 md:px-12 w-full max-w-5xl mx-auto overflow-hidden">
-      <motion.div 
+    <section
+      id="experience"
+      className="mx-auto w-full max-w-5xl overflow-hidden px-6 py-16 md:px-12 md:py-24"
+    >
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -17,34 +20,32 @@ export function Experience() {
         className="flex flex-col gap-12"
       >
         <div className="flex items-center gap-4">
-          <div className="p-3 bg-primary/10 rounded-xl">
-            <Briefcase className="w-6 h-6 text-primary" />
+          <div className="bg-primary/10 rounded-xl p-3">
+            <Briefcase className="text-primary h-6 w-6" />
           </div>
           <h2 className="text-3xl font-bold tracking-tight">Work Experience</h2>
         </div>
 
-        <div className="relative border-l-2 border-border/50 space-y-12 pb-4 mt-8">
+        <div className="border-border/50 relative mt-8 space-y-12 border-l-2 pb-4">
           {experience.map((job) => (
-            <div key={job.company} className="relative pl-6 group">
+            <div key={job.company} className="group relative pl-6">
               {/* Timeline dot */}
-              <div className="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-border group-hover:bg-primary transition-colors duration-300" />
-              
-              <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2 mb-4">
+              <div className="bg-border group-hover:bg-primary absolute top-2 -left-[5px] h-[9px] w-[9px] rounded-full transition-colors duration-300" />
+
+              <div className="mb-4 flex flex-col justify-between gap-2 md:flex-row md:items-baseline">
                 <div>
-                  <h3 className="text-xl font-bold text-foreground">{job.role}</h3>
-                  <div className="text-lg font-medium text-muted-foreground">{job.company}</div>
+                  <h3 className="text-foreground text-xl font-bold">{job.role}</h3>
+                  <div className="text-muted-foreground text-lg font-medium">{job.company}</div>
                 </div>
-                <div className="text-sm font-mono text-muted-foreground/80 bg-muted px-3 py-1 rounded-full w-fit">
+                <div className="text-muted-foreground/80 bg-muted w-fit rounded-full px-3 py-1 font-mono text-sm">
                   {job.period}
                 </div>
               </div>
 
-              <p className="text-muted-foreground mb-4">
-                {job.description}
-              </p>
+              <p className="text-muted-foreground mb-4">{job.description}</p>
 
               {job.bullets && (
-                <ul className="list-disc pl-5 space-y-1.5 text-sm md:text-base text-muted-foreground mb-6 marker:text-primary/70">
+                <ul className="text-muted-foreground marker:text-primary/70 mb-6 list-disc space-y-1.5 pl-5 text-sm md:text-base">
                   {job.bullets.map((bullet: string) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
@@ -55,7 +56,7 @@ export function Experience() {
                 {job.highlights.map((highlight) => (
                   <span
                     key={highlight}
-                    className="inline-flex items-center rounded-full border border-border/50 bg-background px-3 py-1 text-xs font-medium text-foreground transition-colors hover:bg-muted"
+                    className="border-border/50 bg-background text-foreground hover:bg-muted inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium transition-colors"
                   >
                     {highlight}
                   </span>
@@ -66,5 +67,5 @@ export function Experience() {
         </div>
       </motion.div>
     </section>
-  )
+  );
 }

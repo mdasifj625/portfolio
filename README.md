@@ -38,7 +38,7 @@ A premium, minimal, and highly professional developer portfolio built for speed,
 
 ## 📝 Editing Content
 
-To update your portfolio, you **do not need to touch the React code**. 
+To update your portfolio, you **do not need to touch the React code**.
 Simply open `src/data/portfolio.json` and update your details:
 
 ```json
@@ -60,23 +60,27 @@ Simply open `src/data/portfolio.json` and update your details:
   ]
 }
 ```
-*Note: Ensure your `resumeUrl` uses the Google Docs `/export?format=pdf` format for direct downloads!*
-*Note: Place your profile photo in the `public/` directory named `avatar.png`.*
+
+_Note: Ensure your `resumeUrl` uses the Google Docs `/export?format=pdf` format for direct downloads!_
+_Note: Place your profile photo in the `public/` directory named `avatar.png`._
 
 ## 🛠️ Local Development
 
 First, clone the repository:
+
 ```bash
 git clone https://github.com/mdasifj625/portfolio.git
 cd portfolio
 ```
 
 Install dependencies:
+
 ```bash
 yarn install
 ```
 
 Run the development server:
+
 ```bash
 yarn dev
 ```
