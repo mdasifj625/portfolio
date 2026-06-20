@@ -34,9 +34,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <div className="container flex h-16 max-w-screen-2xl items-center mx-auto px-4 md:px-8">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-8 flex items-center space-x-2 group">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between mx-auto px-4 md:px-8">
+        <div className="flex">
+          <Link href="/" className="mr-4 md:mr-8 flex items-center space-x-2 group">
             <div className="bg-primary/10 p-1.5 rounded-lg group-hover:bg-primary/20 transition-colors">
               <TerminalSquare className="h-5 w-5 text-primary" />
             </div>
@@ -44,7 +44,7 @@ export function Navbar() {
               AJ.
             </span>
           </Link>
-          <nav className="flex items-center space-x-8 text-sm font-medium">
+          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
             {["Experience", "Projects", "Writing"].map((item) => (
               <Link
                 key={item}
