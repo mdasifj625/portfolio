@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { CommandMenu } from "@/components/command-menu";
+import portfolioData from "@/data/portfolio.json";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,22 +24,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Md Asif Jawed - Senior Backend Engineer",
-    template: "%s | Md Asif Jawed",
+    default: `${portfolioData.personal.name} - ${portfolioData.personal.role}`,
+    template: `%s | ${portfolioData.personal.name}`,
   },
-  description: "Portfolio of Md Asif Jawed, Senior Backend Engineer focusing on scalable systems, distributed architectures, and SaaS products.",
+  description: portfolioData.personal.description,
   openGraph: {
-    title: "Md Asif Jawed - Senior Backend Engineer",
-    description: "Portfolio of Md Asif Jawed, Senior Backend Engineer focusing on scalable systems, distributed architectures, and SaaS products.",
-    url: "https://asif-portfolio.com",
-    siteName: "Md Asif Jawed Portfolio",
+    title: `${portfolioData.personal.name} - ${portfolioData.personal.role}`,
+    description: portfolioData.personal.description,
+    url: portfolioData.personal.domain,
+    siteName: `${portfolioData.personal.name} Portfolio`,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Md Asif Jawed - Senior Backend Engineer",
-    description: "Portfolio of Md Asif Jawed, Senior Backend Engineer focusing on scalable systems, distributed architectures, and SaaS products.",
+    title: `${portfolioData.personal.name} - ${portfolioData.personal.role}`,
+    description: portfolioData.personal.description,
   },
 };
 
@@ -50,13 +51,10 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Md Asif Jawed",
-    jobTitle: "Senior Backend Engineer",
-    url: "https://asif-portfolio.com",
-    sameAs: [
-      "https://linkedin.com/in/yourusername",
-      "https://github.com/mdasifj625"
-    ]
+    name: portfolioData.personal.name,
+    jobTitle: portfolioData.personal.role,
+    url: portfolioData.personal.domain,
+    sameAs: portfolioData.socialLinks.map((link) => link.url)
   };
 
   return (

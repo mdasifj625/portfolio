@@ -2,8 +2,10 @@
   "personal": {
     "name": "Md Asif Jawed",
     "role": "Senior Backend Engineer",
+    "initials": "AJ.",
     "availability": "Available for new opportunities",
     "email": "hello@example.com",
+    "domain": "https://mdasifjawed.vercel.app",
     "description": "Building scalable backend systems, distributed architectures, and production-grade SaaS products.",
     "stats": [
       { "value": "4+", "label": "Years Experience" },

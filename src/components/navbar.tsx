@@ -41,7 +41,7 @@ export function Navbar() {
               <TerminalSquare className="h-5 w-5 text-primary" />
             </div>
             <span className="hidden font-bold sm:inline-block tracking-tight text-lg group-hover:text-primary transition-colors">
-              AJ.
+              {portfolioData.personal.initials}
             </span>
           </Link>
           <nav className="hidden md:flex items-center space-x-5 lg:space-x-8 text-sm font-medium">
