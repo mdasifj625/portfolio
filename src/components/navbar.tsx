@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import Link from "next/link"
+import { ScrollLink as Link } from "@/components/scroll-link"
 import { useTheme } from "next-themes"
 import { Moon, Sun, TerminalSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"

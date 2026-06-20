@@ -1,5 +1,5 @@
 
-import Link from "next/link";
+import { ScrollLink as Link } from "@/components/scroll-link";
 import { Download, ChevronRight, Briefcase } from "lucide-react";
 import { About } from "@/components/about";
 import { Experience } from "@/components/experience";
@@ -65,14 +65,14 @@ export default function Home() {
               Download Resume
             </a>
             <Link
-              href="#projects"
+              href="/#projects"
               className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 rounded-md px-8 w-full sm:w-auto gap-2"
             >
               <Briefcase className="w-4 h-4" />
               View Projects
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8 w-full sm:w-auto gap-2 group"
             >
               Contact Me
