@@ -6,7 +6,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { CommandMenu } from "@/components/command-menu";
 import portfolioData from "@/data/portfolio.json";
-import Script from "next/script";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -64,12 +64,13 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans overflow-x-hidden">
-        <Script
-          id="json-ld"
+      <head>
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+      </head>
+      <body className="min-h-full flex flex-col font-sans overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
