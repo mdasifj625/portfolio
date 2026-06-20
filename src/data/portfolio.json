@@ -3,10 +3,10 @@
     "name": "Md Asif Jawed",
     "role": "Senior Backend Engineer",
     "initials": "AJ.",
-    "availability": "Available for new opportunities",
-    "email": "hello@example.com",
+    "availability": "Available for Senior Backend Engineer Opportunities",
+    "email": "engmdasifj625@gmail.com",
     "domain": "https://mdasifjawed.vercel.app",
-    "description": "Building scalable backend systems, distributed architectures, and production-grade SaaS products.",
+    "description": "Senior Backend Engineer with 4+ years of experience building scalable backend systems, payment platforms, distributed architectures, and cloud-native applications using Node.js, TypeScript, PostgreSQL, Redis, and AWS.",
     "stats": [
       {
         "value": "4+",
@@ -14,26 +14,27 @@
       },
       {
         "value": "SDE-III",
-        "label": "Senior Level"
+        "label": "Senior Backend"
       },
       {
         "value": "AWS",
-        "label": "Cloud Expert"
+        "label": "Cloud Native"
       },
       {
         "value": "SaaS",
-        "label": "Founder"
+        "label": "Product Builder"
       }
     ],
     "resumeUrl": "https://docs.google.com/document/d/1pWiArhXJFEY3VylbThUG02WyxnUWEykDv6tvDpeb19g/export?format=pdf",
     "avatarUrl": "/avatar.png",
     "about": [
-      "I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️",
-      "I am fluent in classics like Node.js, TypeScript, and Postgres.",
-      "My field of interest's are building new Web Technologies and Products and also in areas related to Deep Learning.",
-      "Whenever possible, I also apply my passion for developing products with Node.js and Modern Javascript Library and Frameworks like React.js and Next.js."
+      "I am a Senior Backend Engineer with 4+ years of experience designing and operating scalable backend systems.",
+      "My expertise includes Node.js, TypeScript, NestJS, PostgreSQL, Redis, AWS, microservices, distributed systems, and payment infrastructure.",
+      "I have worked extensively on payment gateway integrations, wallet systems, real-time applications, event-driven architectures, and cloud-native platforms.",
+      "Most recently, I designed and launched TarbiyahOS, a SaaS platform built with Next.js, Supabase, PostgreSQL, and modern observability tooling."
     ]
   },
+
   "socialLinks": [
     {
       "platform": "GitHub",
@@ -42,11 +43,32 @@
     },
     {
       "platform": "LinkedIn",
-      "url": "https://linkedin.com/in/yourusername",
+      "url": "https://linkedin.com/in/mdasifj625",
       "icon": "linkedin"
     }
   ],
+
   "experience": [
+    {
+      "company": "TarbiyahOS",
+      "role": "Independent Product Engineer",
+      "period": "Nov 2025 – Present",
+      "highlights": [
+        "SaaS Product",
+        "Next.js",
+        "Supabase",
+        "PostgreSQL",
+        "Observability"
+      ],
+      "description": "Designed and launched a parenting-focused SaaS platform while owning product architecture, engineering, deployment, monitoring, analytics, and growth infrastructure.",
+      "bullets": [
+        "Architected and developed the platform using Next.js, TypeScript, Supabase, PostgreSQL, and Tailwind CSS.",
+        "Designed authentication flows, role-based access control, onboarding workflows, and database architecture using Supabase Auth and PostgreSQL.",
+        "Implemented observability and analytics infrastructure using PostHog, Sentry, and LogRocket.",
+        "Established SEO foundations including metadata management, sitemap generation, structured content architecture, and blog workflows.",
+        "Managed the complete product lifecycle including development, deployment, monitoring, performance optimization, and production operations."
+      ]
+    },
     {
       "company": "Spartan Poker / OneVerse Gaming",
       "role": "Senior Backend Engineer (SDE-III)",
@@ -58,57 +80,52 @@
         "AWS",
         "Real-time Systems"
       ],
-      "description": "Architected and scaled core backend payment infrastructures and real-time gaming services.",
+      "description": "Designed and operated scalable backend services supporting payment systems, wallet infrastructure, and real-time gaming applications.",
       "bullets": [
-        "Spearheaded the migration of legacy monolithic architecture to highly scalable, event-driven microservices using Node.js and AWS.",
-        "Engineered robust payment gateway integrations and core wallet systems, successfully processing millions of high-concurrency transactions securely.",
-        "Optimized real-time gaming services, reducing websocket latency by 40% to ensure seamless player experiences during peak traffic."
+        "Designed and maintained scalable backend services and REST APIs using Node.js, TypeScript, and NestJS.",
+        "Architected microservices using event-driven and asynchronous communication patterns with RabbitMQ.",
+        "Integrated Cashfree, Razorpay, and Juspay payment gateways with idempotent workflows and retry mechanisms.",
+        "Built wallet infrastructure supporting balance tracking, bonus distribution, and transactional consistency.",
+        "Implemented real-time communication features using WebSockets and long polling.",
+        "Optimized performance using Redis caching strategies and efficient database access patterns.",
+        "Worked extensively with AWS services including EKS, Lambda, EC2, S3, SQS, SNS, IAM, CloudWatch, and ElastiCache.",
+        "Contributed to CI/CD processes, observability initiatives, technical documentation, and engineering mentorship."
       ]
     },
     {
       "company": "Solulab Pvt Ltd",
       "role": "Backend Engineer",
       "period": "Aug 2021 – May 2023",
-      "highlights": [
-        "Node.js",
-        "APIs",
-        "PostgreSQL",
-        "AWS",
-        "Web3 Projects"
-      ],
-      "description": "Developed and maintained highly performant APIs for diverse SaaS and Web3 applications.",
+      "highlights": ["Node.js", "APIs", "PostgreSQL", "AWS", "Web3"],
+      "description": "Built backend systems and APIs across SaaS, enterprise, and Web3 applications.",
       "bullets": [
-        "Designed and implemented high-performance RESTful APIs for multiple enterprise SaaS platforms, decreasing average response times by 30%.",
-        "Optimized complex PostgreSQL database queries and implemented caching layers using Redis, drastically reducing database load.",
-        "Integrated Web3 capabilities and smart contract interactions for blockchain-centric client projects, ensuring robust security standards."
+        "Developed backend services using Node.js, Express.js, and TypeScript.",
+        "Built RESTful and GraphQL APIs with a focus on performance and maintainability.",
+        "Designed database schemas and optimized queries across PostgreSQL, MySQL, and MongoDB.",
+        "Implemented asynchronous processing using queues and event-driven workflows.",
+        "Developed backend integrations for Web3 and NFT platforms.",
+        "Worked with AWS services including EC2, S3, Lambda, SES, SNS, SQS, and Redis.",
+        "Utilized Docker and CI/CD pipelines to streamline deployments."
       ]
     }
   ],
+
   "skills": [
     {
       "category": "Backend",
-      "items": [
-        "Node.js",
-        "TypeScript",
-        "NestJS",
-        "Express"
-      ]
+      "items": ["Node.js", "TypeScript", "NestJS", "Express.js"]
     },
     {
       "category": "Databases",
-      "items": [
-        "PostgreSQL",
-        "MySQL",
-        "MongoDB",
-        "Redis"
-      ]
+      "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
     },
     {
       "category": "Cloud",
       "items": [
         "AWS Lambda",
-        "EKS",
         "EC2",
+        "EKS",
+        "S3",
         "SQS",
         "SNS",
         "CloudWatch",
@@ -117,103 +134,100 @@
     },
     {
       "category": "DevOps",
-      "items": [
-        "Docker",
-        "GitHub Actions",
-        "CI/CD"
-      ]
+      "items": ["Docker", "GitHub Actions", "CI/CD"]
     },
     {
       "category": "Observability",
-      "items": [
-        "Sentry",
-        "PostHog",
-        "LogRocket"
-      ]
+      "items": ["Sentry", "PostHog", "LogRocket"]
     },
     {
       "category": "Architecture",
       "items": [
         "Microservices",
         "Distributed Systems",
-        "Event Driven Systems",
+        "Event-Driven Architecture",
         "System Design"
       ]
     }
   ],
+
   "projects": [
     {
       "title": "TarbiyahOS",
-      "status": "Production Ready",
-      "description": "A comprehensive SaaS platform designed to streamline educational operations, engineered for high velocity, scalability, and optimal performance.",
+      "status": "Live Product",
+      "description": "A parenting-focused SaaS platform designed to help Muslim families build discipline, routines, character development, and structured family systems.",
       "bullets": [
-        "Architected a strict multi-tenant data isolation strategy using PostgreSQL Row Level Security (RLS) via Supabase.",
-        "Leveraged Next.js App Router and React Server Components to reduce client-side JS bundles by 60%, achieving near-instant Time To Interactive.",
-        "Implemented real-time data sync using PostgreSQL triggers and designed a seamless Single Sign-On (SSO) authentication workflow."
+        "Built using Next.js, TypeScript, Supabase, PostgreSQL, and Progressive Web App architecture.",
+        "Implemented authentication, onboarding workflows, role-based access control, analytics, and observability tooling.",
+        "Integrated PostHog, Sentry, and LogRocket for monitoring, debugging, and product insights.",
+        "Established SEO infrastructure including metadata management, sitemap generation, structured content, and blog architecture."
       ],
       "techStack": [
-        "Next.js App Router",
+        "Next.js",
+        "TypeScript",
         "Supabase",
         "PostgreSQL",
         "Tailwind CSS",
+        "PostHog",
         "Sentry",
-        "LogRocket"
+        "LogRocket",
+        "Vercel"
       ],
       "links": {
         "live": "https://tarbiyahos.com",
         "caseStudy": "/works/tarbiyahos"
       },
       "architecture": {
-        "title": "SaaS Architecture",
-        "description": "Server Components • RLS • Real-time DB"
+        "title": "Product Architecture",
+        "description": "Next.js • Supabase • PostgreSQL • PWA"
       }
     }
   ],
+
   "works": [
     {
       "slug": "tarbiyahos",
-      "title": "Building TarbiyahOS: A Comprehensive SaaS Architecture Case Study",
-      "date": "June 19, 2026",
+      "title": "Building TarbiyahOS: From Idea to Production SaaS",
+      "date": "June 2026",
       "readTime": "8 min read",
-      "tags": [
-        "Architecture",
-        "SaaS",
-        "Next.js",
-        "Supabase"
-      ],
-      "intro": "Building TarbiyahOS was a unique engineering challenge that focused heavily on creating a multi-tenant SaaS application designed to perform reliably under heavy load. The decision to use Next.js for the frontend and Supabase for the backend stemmed from the need for high velocity without sacrificing stability.",
+      "tags": ["SaaS", "Next.js", "Supabase", "Architecture"],
+      "intro": "TarbiyahOS is a parenting-focused SaaS platform designed to help Muslim families build stronger routines, discipline, and family systems. The project provided an opportunity to own every stage of the product lifecycle from architecture and development to deployment, monitoring, analytics, and SEO.",
       "sections": [
         {
           "heading": "Why I Built It",
-          "content": "TarbiyahOS was built to solve the operational chaos experienced by modern educational institutions. Existing platforms were either too rigid, overly bloated, or extremely slow. The goal was to build a streamlined, highly performant, and developer-friendly alternative that respects tenant data isolation."
+          "content": "Many parents struggle with consistency, routines, and long-term character development. TarbiyahOS was created to provide a structured system that combines timeless parenting principles with practical execution."
         },
         {
-          "heading": "Architecture Decisions",
-          "content": "When evaluating the tech stack for TarbiyahOS, I needed to optimize for three core pillars: developer experience, performance, and built-in security for multi-tenancy. I bypassed traditional ORMs and custom-built REST APIs in favor of a modern, server-centric approach."
+          "heading": "Architecture Overview",
+          "content": "The platform is built using Next.js, TypeScript, Supabase, PostgreSQL, and Progressive Web App architecture. The goal was to maximize development velocity while maintaining reliability and scalability."
         },
         {
           "heading": "Why Next.js",
-          "content": "Choosing the Next.js App Router allowed me to heavily utilize React Server Components. This drastically reduced the client-side JavaScript bundle, resulting in a faster Time To Interactive (TTI) for heavy dashboard views and incredible SEO for public-facing landing pages."
+          "content": "Next.js provides an excellent developer experience, strong SEO capabilities, server-side rendering, and modern routing features. It allows the marketing site and application experience to coexist within a unified architecture."
         },
         {
           "heading": "Why Supabase",
-          "content": "Supabase was chosen for its direct Postgres connection and built-in features. It provided out-of-the-box authentication (frictionless SSO and magic-link logins) and allowed for real-time updates to connected clients using PostgreSQL triggers without maintaining complex websocket servers."
+          "content": "Supabase provided authentication, database management, storage, and backend capabilities while keeping the architecture simple and maintainable for a solo product builder."
         },
         {
-          "heading": "Why PostgreSQL & RLS Design",
-          "content": "PostgreSQL was the natural choice for relational integrity. Instead of managing tenant isolation in application code, I architected a strict multi-tenant data isolation strategy using PostgreSQL Row Level Security (RLS) via Supabase. This enforces tenant boundaries directly at the database level, meaning data leaks between tenants are mathematically impossible even if application code fails."
+          "heading": "Authentication Design",
+          "content": "Authentication is implemented using Supabase Auth with secure session handling, protected routes, onboarding flows, and role-based access controls."
         },
         {
-          "heading": "Analytics & Monitoring Stack",
-          "content": "Visibility into user behavior and system health is critical for a SaaS product. I integrated PostHog heavily for feature flags and comprehensive product analytics. For observability, Sentry and LogRocket were critical for capturing edge-case errors and replaying user sessions in a distributed environment."
+          "heading": "Database Design",
+          "content": "PostgreSQL was selected for its reliability, relational modeling capabilities, and long-term maintainability. The schema was designed to support structured content, user onboarding, and future product growth."
+        },
+        {
+          "heading": "Analytics & Observability",
+          "content": "PostHog is used for product analytics and user behavior insights. Sentry and LogRocket provide error monitoring, debugging, and production visibility."
         },
         {
           "heading": "SEO Strategy",
-          "content": "The SEO strategy relied heavily on Next.js Server-Side Rendering (SSR). By strictly separating the public marketing pages (statically generated) from the private dashboard (dynamic server components), I ensured lightning-fast load times for search engine crawlers, while JSON-LD schema provided structured data."
+          "content": "The marketing site is optimized through metadata management, sitemap generation, structured content, and blog architecture to support long-term organic growth."
         },
         {
-          "heading": "Lessons Learned",
-          "content": "The primary challenge was managing complex state across the application without relying on heavy global state managers like Redux. By relying on React Server Components for data fetching and React Query for client-side caching, the architecture mental model remained simple and predictable. Looking back, optimizing database indexes early and thoroughly testing RLS policies saved us from potential performance bottlenecks as the platform scaled."
+          "heading": "Challenges & Lessons Learned",
+          "content": "Building TarbiyahOS reinforced the importance of balancing product development, architecture decisions, observability, SEO, and deployment processes. The project strengthened my understanding of full product ownership while maintaining engineering quality."
         }
       ]
     }
