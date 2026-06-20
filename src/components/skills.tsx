@@ -1,6 +1,6 @@
 "use client"
 
-import { Layers, ChevronRight } from "lucide-react"
+import { Layers } from "lucide-react"
 import { motion } from "framer-motion"
 import portfolioData from "@/data/portfolio.json"
 
@@ -57,8 +57,8 @@ export function Skills() {
                     key={i}
                     className="group/item flex items-center gap-3 py-2.5 border-b border-border/40 last:border-0 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground cursor-default"
                   >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary/80 text-primary/70 transition-all duration-300 group-hover/item:bg-primary group-hover/item:text-primary-foreground group-hover/item:shadow-[0_0_10px_-2px_rgba(var(--primary),0.5)]">
-                      <ChevronRight className="h-3.5 w-3.5" />
+                    <span className="flex items-center justify-center w-6 shrink-0">
+                      <span className="w-3 h-[2px] bg-primary/40 rounded-full transition-all duration-300 group-hover/item:w-5 group-hover/item:bg-primary group-hover/item:shadow-[0_0_8px_-1px_rgba(var(--primary),0.6)]" />
                     </span>
                     <span className="transition-transform duration-300 group-hover/item:translate-x-1">{skill}</span>
                   </li>
