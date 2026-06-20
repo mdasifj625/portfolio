@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { ScrollLink as Link } from "@/components/scroll-link"
 import portfolioData from "@/data/portfolio.json"
 
 export function Footer() {
