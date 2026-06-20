@@ -18,7 +18,13 @@ const eslintConfig = defineConfig([
   {
     rules: {
       "react/no-array-index-key": "error",
-      "sonarjs/prefer-read-only-props": "error"
+      "sonarjs/prefer-read-only-props": "error",
+      "sonarjs/cognitive-complexity": ["error", 15],
+      "sonarjs/no-duplicate-string": ["warn", { "threshold": 5 }],
+      "react/jsx-no-useless-fragment": "error",
+      "react/jsx-pascal-case": "error",
+      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-explicit-any": "error"
     }
   }
 ]);
