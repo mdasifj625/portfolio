@@ -5,8 +5,9 @@ import { buttonVariants } from "@/components/ui/button";
 import portfolioData from "@/data/portfolio.json";
 import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const work = portfolioData.works?.find((w) => w.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const work = portfolioData.works?.find((w) => w.slug === slug);
   if (!work) return {};
   return {
     title: `${work.title} | ${portfolioData.personal.name}`,
@@ -20,8 +21,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function WorkPage({ params }: { params: { slug: string } }) {
-  const work = portfolioData.works?.find((w) => w.slug === params.slug);
+export default async function WorkPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const work = portfolioData.works?.find((w) => w.slug === slug);
 
   if (!work) {
     notFound();
