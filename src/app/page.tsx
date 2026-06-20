@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-24">
+      <main className="flex-1 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-6 py-16 md:py-24">
         <div className="max-w-4xl w-full text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           
           {/* Subtitle / Eyebrow */}

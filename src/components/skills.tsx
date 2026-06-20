@@ -23,7 +23,7 @@ export function Skills() {
   const { skills: skillsGroups } = portfolioData;
 
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 w-full max-w-5xl mx-auto border-t border-border/40 overflow-hidden">
+    <section id="skills" className="py-16 md:py-24 px-6 md:px-12 w-full max-w-5xl mx-auto border-t border-border/40 overflow-hidden">
       <motion.div 
         initial="hidden"
         whileInView="show"

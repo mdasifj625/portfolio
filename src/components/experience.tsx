@@ -8,7 +8,7 @@ export function Experience() {
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="py-24 px-6 md:px-12 w-full max-w-5xl mx-auto overflow-hidden">
+    <section id="experience" className="py-16 md:py-24 px-6 md:px-12 w-full max-w-5xl mx-auto overflow-hidden">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

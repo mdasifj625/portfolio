@@ -3,7 +3,7 @@ import { PenTool } from "lucide-react";
 
 export default function BlogIndex() {
   return (
-    <main className="flex-1 flex flex-col items-center min-h-[calc(100vh-4rem)] px-6 py-24">
+    <main className="flex-1 flex flex-col items-center min-h-[calc(100vh-4rem)] px-6 py-16 md:py-24">
       <div className="max-w-3xl w-full space-y-8">
         <div className="flex items-center gap-4 border-b border-border/40 pb-8">
           <div className="p-3 bg-primary/10 rounded-xl">
