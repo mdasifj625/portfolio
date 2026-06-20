@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Send, CheckCircle2 } from "lucide-react"
+import { Mail, Send, CheckCircle2, Copy } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import portfolioData from "@/data/portfolio.json"
@@ -40,15 +40,28 @@ export function Contact() {
         <div className="relative border-l-2 border-border/50 pl-6 mt-4 flex flex-col items-start text-left gap-6 w-full">
           <div className="space-y-1">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Direct Email</h3>
-            <a 
-              href={`mailto:${personal.email}`}
-              className="text-xl md:text-2xl font-medium text-foreground hover:text-primary transition-colors inline-block"
-            >
-              {personal.email}
-            </a>
+            <div className="flex items-center gap-3">
+              <a 
+                href={`mailto:${personal.email}`}
+                className="text-xl md:text-2xl font-medium text-foreground hover:text-primary transition-colors inline-block"
+              >
+                {personal.email}
+              </a>
+              <button
+                onClick={handleCopyEmail}
+                className="p-2 rounded-md hover:bg-secondary text-muted-foreground hover:text-foreground transition-colors group relative"
+                aria-label="Copy email address"
+              >
+                {copied ? (
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                ) : (
+                  <Copy className="w-5 h-5" />
+                )}
+              </button>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 w-full">
+          <div className="flex flex-col sm:flex-row gap-3 w-full mt-2">
             <a 
               href={`mailto:${personal.email}`}
               className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-lg px-6 w-full sm:w-auto gap-2 shadow-md"
@@ -56,23 +69,6 @@ export function Contact() {
               <Send className="w-4 h-4" />
               Write an Email
             </a>
-            
-            <button 
-              onClick={handleCopyEmail}
-              className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 rounded-lg px-6 w-full sm:w-auto gap-2 border border-border/50"
-            >
-              {copied ? (
-                <>
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                  Email Copied!
-                </>
-              ) : (
-                <>
-                  <Mail className="w-4 h-4" />
-                  Copy Address
-                </>
-              )}
-            </button>
           </div>
         </div>
       </motion.div>
