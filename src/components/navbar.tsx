@@ -45,10 +45,10 @@ export function Navbar() {
             </span>
           </Link>
           <nav className="hidden md:flex items-center space-x-5 lg:space-x-8 text-sm font-medium">
-            {["About", "Experience", "Skills", "Projects", "Contact", "Blog"].map((item) => (
+            {["About", "Experience", "Skills", "Projects", "Contact"].map((item) => (
               <Link
                 key={item}
-                href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
+                href={`/#${item.toLowerCase()}`}
                 className="relative transition-colors hover:text-foreground text-muted-foreground group"
               >
                 {item}

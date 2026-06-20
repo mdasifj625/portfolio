@@ -90,13 +90,7 @@ export function CommandMenu() {
             <Mail className="mr-2 h-4 w-4" />
             <span>Contact</span>
           </CommandItem>
-          <CommandItem
-            value="Blog Writing Articles"
-            onSelect={() => runCommand(() => router.push("/blog"))}
-          >
-            <BookOpen className="mr-2 h-4 w-4" />
-            <span>Technical Blog</span>
-          </CommandItem>
+
           <CommandItem
             value="Download Resume CV"
             onSelect={() =>

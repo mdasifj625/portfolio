@@ -20,7 +20,6 @@ export function Footer() {
           <Link href="/#skills" className="hover:text-primary transition-colors">Skills</Link>
           <Link href="/#projects" className="hover:text-primary transition-colors">Projects</Link>
           <Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link>
-          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
         </nav>
 
         {/* Copyright */}

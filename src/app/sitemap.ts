@@ -3,6 +3,14 @@ import portfolioData from "@/data/portfolio.json"
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const domain = portfolioData.personal.domain;
+  
+  const works = (portfolioData.works || []).map((work) => ({
+    url: `${domain}/works/${work.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
   return [
     {
       url: `${domain}`,
@@ -10,17 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 1,
     },
-    {
-      url: `${domain}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${domain}/blog/building-tarbiyahos`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+    ...works
   ]
 }

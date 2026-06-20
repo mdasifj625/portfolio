@@ -8,10 +8,22 @@
     "domain": "https://mdasifjawed.vercel.app",
     "description": "Building scalable backend systems, distributed architectures, and production-grade SaaS products.",
     "stats": [
-      { "value": "4+", "label": "Years Experience" },
-      { "value": "SDE-III", "label": "Senior Level" },
-      { "value": "AWS", "label": "Cloud Expert" },
-      { "value": "SaaS", "label": "Founder" }
+      {
+        "value": "4+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "SDE-III",
+        "label": "Senior Level"
+      },
+      {
+        "value": "AWS",
+        "label": "Cloud Expert"
+      },
+      {
+        "value": "SaaS",
+        "label": "Founder"
+      }
     ],
     "resumeUrl": "https://docs.google.com/document/d/1pWiArhXJFEY3VylbThUG02WyxnUWEykDv6tvDpeb19g/export?format=pdf",
     "avatarUrl": "/avatar.png",
@@ -57,7 +69,13 @@
       "company": "Solulab Pvt Ltd",
       "role": "Backend Engineer",
       "period": "Aug 2021 – May 2023",
-      "highlights": ["Node.js", "APIs", "PostgreSQL", "AWS", "Web3 Projects"],
+      "highlights": [
+        "Node.js",
+        "APIs",
+        "PostgreSQL",
+        "AWS",
+        "Web3 Projects"
+      ],
       "description": "Developed and maintained highly performant APIs for diverse SaaS and Web3 applications.",
       "bullets": [
         "Designed and implemented high-performance RESTful APIs for multiple enterprise SaaS platforms, decreasing average response times by 30%.",
@@ -69,20 +87,49 @@
   "skills": [
     {
       "category": "Backend",
-      "items": ["Node.js", "TypeScript", "NestJS", "Express"]
+      "items": [
+        "Node.js",
+        "TypeScript",
+        "NestJS",
+        "Express"
+      ]
     },
     {
       "category": "Databases",
-      "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis"
+      ]
     },
     {
       "category": "Cloud",
-      "items": ["AWS Lambda", "EKS", "EC2", "SQS", "SNS", "CloudWatch", "IAM"]
+      "items": [
+        "AWS Lambda",
+        "EKS",
+        "EC2",
+        "SQS",
+        "SNS",
+        "CloudWatch",
+        "IAM"
+      ]
     },
-    { "category": "DevOps", "items": ["Docker", "GitHub Actions", "CI/CD"] },
+    {
+      "category": "DevOps",
+      "items": [
+        "Docker",
+        "GitHub Actions",
+        "CI/CD"
+      ]
+    },
     {
       "category": "Observability",
-      "items": ["Sentry", "PostHog", "LogRocket"]
+      "items": [
+        "Sentry",
+        "PostHog",
+        "LogRocket"
+      ]
     },
     {
       "category": "Architecture",
@@ -114,12 +161,61 @@
       ],
       "links": {
         "live": "https://tarbiyahos.com",
-        "caseStudy": "/blog/building-tarbiyahos"
+        "caseStudy": "/works/tarbiyahos"
       },
       "architecture": {
         "title": "SaaS Architecture",
         "description": "Server Components • RLS • Real-time DB"
       }
+    }
+  ],
+  "works": [
+    {
+      "slug": "tarbiyahos",
+      "title": "Building TarbiyahOS: A Comprehensive SaaS Architecture Case Study",
+      "date": "June 19, 2026",
+      "readTime": "8 min read",
+      "tags": [
+        "Architecture",
+        "SaaS",
+        "Next.js",
+        "Supabase"
+      ],
+      "intro": "Building TarbiyahOS was a unique engineering challenge that focused heavily on creating a multi-tenant SaaS application designed to perform reliably under heavy load. The decision to use Next.js for the frontend and Supabase for the backend stemmed from the need for high velocity without sacrificing stability.",
+      "sections": [
+        {
+          "heading": "Why I Built It",
+          "content": "TarbiyahOS was built to solve the operational chaos experienced by modern educational institutions. Existing platforms were either too rigid, overly bloated, or extremely slow. The goal was to build a streamlined, highly performant, and developer-friendly alternative that respects tenant data isolation."
+        },
+        {
+          "heading": "Architecture Decisions",
+          "content": "When evaluating the tech stack for TarbiyahOS, I needed to optimize for three core pillars: developer experience, performance, and built-in security for multi-tenancy. I bypassed traditional ORMs and custom-built REST APIs in favor of a modern, server-centric approach."
+        },
+        {
+          "heading": "Why Next.js",
+          "content": "Choosing the Next.js App Router allowed me to heavily utilize React Server Components. This drastically reduced the client-side JavaScript bundle, resulting in a faster Time To Interactive (TTI) for heavy dashboard views and incredible SEO for public-facing landing pages."
+        },
+        {
+          "heading": "Why Supabase",
+          "content": "Supabase was chosen for its direct Postgres connection and built-in features. It provided out-of-the-box authentication (frictionless SSO and magic-link logins) and allowed for real-time updates to connected clients using PostgreSQL triggers without maintaining complex websocket servers."
+        },
+        {
+          "heading": "Why PostgreSQL & RLS Design",
+          "content": "PostgreSQL was the natural choice for relational integrity. Instead of managing tenant isolation in application code, I architected a strict multi-tenant data isolation strategy using PostgreSQL Row Level Security (RLS) via Supabase. This enforces tenant boundaries directly at the database level, meaning data leaks between tenants are mathematically impossible even if application code fails."
+        },
+        {
+          "heading": "Analytics & Monitoring Stack",
+          "content": "Visibility into user behavior and system health is critical for a SaaS product. I integrated PostHog heavily for feature flags and comprehensive product analytics. For observability, Sentry and LogRocket were critical for capturing edge-case errors and replaying user sessions in a distributed environment."
+        },
+        {
+          "heading": "SEO Strategy",
+          "content": "The SEO strategy relied heavily on Next.js Server-Side Rendering (SSR). By strictly separating the public marketing pages (statically generated) from the private dashboard (dynamic server components), I ensured lightning-fast load times for search engine crawlers, while JSON-LD schema provided structured data."
+        },
+        {
+          "heading": "Lessons Learned",
+          "content": "The primary challenge was managing complex state across the application without relying on heavy global state managers like Redux. By relying on React Server Components for data fetching and React Query for client-side caching, the architecture mental model remained simple and predictable. Looking back, optimizing database indexes early and thoroughly testing RLS policies saved us from potential performance bottlenecks as the platform scaled."
+        }
+      ]
     }
   ]
 }
