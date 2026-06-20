@@ -99,7 +99,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
               <section key={idx} className="grid md:grid-cols-[1fr_2fr] gap-8 md:gap-16 items-start group">
                 <div className="sticky top-32">
                   <span className="text-primary font-mono text-sm font-bold tracking-widest uppercase mb-4 block opacity-60">
-                    0{idx + 1} // Phase
+                    0{idx + 1} {"//"} Phase
                   </span>
                   <h3 className="text-3xl md:text-4xl font-extrabold text-foreground tracking-tight">
                     {section.heading}
