@@ -14,16 +14,18 @@ export function Footer() {
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-muted-foreground">
+        <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm font-medium text-muted-foreground">
+          <Link href="/#about" className="hover:text-primary transition-colors">About</Link>
           <Link href="/#experience" className="hover:text-primary transition-colors">Experience</Link>
+          <Link href="/#skills" className="hover:text-primary transition-colors">Skills</Link>
           <Link href="/#projects" className="hover:text-primary transition-colors">Projects</Link>
-          <Link href="/blog" className="hover:text-primary transition-colors">Technical Blog</Link>
-          <a href={personal.resumeUrl} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Resume</a>
+          <Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link>
+          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
         </nav>
 
         {/* Copyright */}
         <div className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()}
+          © {personal.name}
         </div>
       </div>
     </footer>

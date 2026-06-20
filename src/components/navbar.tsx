@@ -44,11 +44,11 @@ export function Navbar() {
               AJ.
             </span>
           </Link>
-          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-            {["Experience", "Projects", "Writing"].map((item) => (
+          <nav className="hidden md:flex items-center space-x-5 lg:space-x-8 text-sm font-medium">
+            {["About", "Experience", "Skills", "Projects", "Contact", "Blog"].map((item) => (
               <Link
                 key={item}
-                href={item === "Writing" ? "/blog" : `/#${item.toLowerCase()}`}
+                href={item === "Blog" ? "/blog" : `/#${item.toLowerCase()}`}
                 className="relative transition-colors hover:text-foreground text-muted-foreground group"
               >
                 {item}
