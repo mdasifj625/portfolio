@@ -56,10 +56,10 @@ export function Contact() {
         <div className="relative border-l-2 border-border/50 pl-6 mt-4 flex flex-col items-start text-left gap-6 w-full">
           <div className="space-y-1">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Direct Email</h3>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-2">
               <a 
                 href={`mailto:${personal.email}`}
-                className="text-xl md:text-2xl font-medium text-foreground hover:text-primary transition-colors inline-block"
+                className="text-base md:text-lg font-mono text-primary bg-primary/5 hover:bg-primary/10 border border-primary/20 px-4 py-2 rounded-lg transition-all"
               >
                 {personal.email}
               </a>
