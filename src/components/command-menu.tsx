@@ -93,7 +93,7 @@ export function CommandMenu() {
           <CommandItem
             value="Download Resume CV"
             onSelect={() =>
-              runCommand(() => window.open(portfolioData.personal.resumeUrl, "_blank"))
+              runCommand(() => window.location.href = "/api/resume")
             }
           >
             <Download className="mr-2 h-4 w-4" />
