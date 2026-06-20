@@ -40,14 +40,16 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-y border-border/50 text-sm">
+          {/* Stats Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3 py-6">
             {personal.stats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col gap-1">
-                <span className="font-bold text-2xl text-foreground">
+              <div key={idx} className="flex items-center gap-2.5 bg-secondary/30 border border-border/50 rounded-full px-5 py-2.5 shadow-sm backdrop-blur-sm transition-colors hover:bg-secondary/50 hover:border-primary/20">
+                <span className="font-bold text-lg text-primary tracking-tight">
                   {stat.value}
                 </span>
-                <span className="text-muted-foreground">{stat.label}</span>
+                <span className="text-sm font-medium text-foreground/80">
+                  {stat.label}
+                </span>
               </div>
             ))}
           </div>
